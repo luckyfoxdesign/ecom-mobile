@@ -1,14 +1,10 @@
-@font-face {
-  font-family: "Graphik";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./fonts/Graphik-Bold-Web.ttf") format("truetype"); }
-
 h1, h2, h3, h4 {
   margin: 0;
-  font-family: 'Graphik';
-  font-weight: 600;
   color: #333333; }
+
+.top_sales-item_list, .hot_news-item_list, .articles-item_list, .phone_by_char-item_list, .interesting_videos-item_list {
+  margin: 0;
+  padding: 0; }
 
 .wrapper {
   display: -webkit-box;
@@ -21,3 +17,38 @@ h1, h2, h3, h4 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.top_sales-item_list li {
+  display: inline; }
+  .top_sales-item_list li a {
+    text-decoration: underline; }
+  .top_sales-item_list li:hover {
+    background-color: #333333; }
+
+.hot_news-item_list li {
+  display: inline; }
+  .hot_news-item_list li a {
+    text-decoration: none; }
+  .hot_news-item_list li:hover {
+    background-color: #333333; }
+
+.articles-item_list li {
+  display: inline; }
+  .articles-item_list li a {
+    text-decoration: none; }
+  .articles-item_list li:hover {
+    background-color: #333333; }
+
+.phone_by_char-item_list li {
+  display: inline; }
+  .phone_by_char-item_list li a {
+    text-decoration: none; }
+  .phone_by_char-item_list li:hover {
+    background-color: #333333; }
+
+.interesting_videos-item_list li {
+  display: inline; }
+  .interesting_videos-item_list li a {
+    text-decoration: none; }
+  .interesting_videos-item_list li:hover {
+    background-color: #333333; }

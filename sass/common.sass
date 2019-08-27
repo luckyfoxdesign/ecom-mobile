@@ -1,0 +1,12 @@
+%mp0
+    margin: 0
+    padding: 0
+
+@mixin item_list($td, $hover_color)
+    @extend %mp0
+    li
+        display: inline
+        a
+            text-decoration: $td
+        &:hover
+            background-color: $hover_color

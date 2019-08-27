@@ -1,8 +1,30 @@
 @import "var"
 @import "fonts"
 @import "components"
+@import "common"
+@import "media"
 
 .wrapper
     display: flex
     justify-content: flex-start
     flex-direction: column
+
+.top_sales
+    &-item_list
+        @include item_list(underline, $grey33)
+
+.hot_news
+    &-item_list
+        @include item_list(none, $grey33)
+
+.articles
+    &-item_list
+        @include item_list(none, $grey33)
+
+.phone_by_char
+    &-item_list
+        @include item_list(none, $grey33)
+
+.interesting_videos
+    &-item_list
+        @include item_list(none, $grey33)
