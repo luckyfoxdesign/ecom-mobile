@@ -1,410 +1,653 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header></header>
-      <section class="top_sales">
-        <div class="top_sales-new_phone">
-          <div class="top_sales-new_phone--block_name">
-            <h3>Сколько вы хотите потратить на свой следующий смартфон?</h3>
-            <div class="top_sales-new_phone--description">
-              Мы сравниваем характеристики и цены на мобильные телефоны и
-              планшеты
-            </div>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="copyright" content="Сайт корпорации МММ" />
+  <meta name="description" content="Jgbcfybt b ,kf ,kf ,kf" />
+  <meta name="keywords" content="раз, два, три" />
+  <meta name="robots" content="all" />
+  <!-- <meta http-equiv="Content-Style-Type" content="text/sass"> -->
+  <meta http-equiv="cleartype" content="on" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/base.css" />
+
+  <title>Document</title>
+  <meta property="og:title" content="Document" />
+  <meta property="og:description" content="wdwdqwdqwdqwdqwdqwdqwdqwd" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Catalog" />
+  <meta property="og:image" content="//ia.media-imdb.com/images/rock.jpg" />
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="nav_links">
+      <div class="nav_links-search_bar">
+        <div class="nav_links-search_bar--logo"></div>
+        <div class="nav_links-search_bar--search">
+          <input class="nav_links-search_bar--search_input" type="search" placeholder="Поиск товаров и брендов" name=""
+            id="">
+          <div class="nav_links-search_bar--search_select">
+            <div class="nav_links-search_bar--select_text"></div>
+            <div class="nav_links-search_bar--select_icon"></div>
           </div>
-          <div class="top_sales-new_phone--summ_total"></div>
-          <div class="top_sales-new_phone--brands">
-            <h4>По брендам</h4>
-            <ul class="top_sales-item_list">
-              <li><a href="http://">Samsung</a></li>
-              <li><a href="http://">Xiaomi</a></li>
-              <li><a href="http://">Redme</a></li>
-              <li><a href="http://">OnePlus</a></li>
-              <li><a href="http://">Apple</a></li>
-              <li><a href="http://">Vivo</a></li>
-              <li><a href="http://">OPPO</a></li>
-              <li><a href="http://">LG</a></li>
-              <li><a href="http://">Google</a></li>
-              <li><a href="http://">Asus</a></li>
-              <li><a href="http://">Lenovo</a></li>
-              <li><a href="http://">Sony</a></li>
-            </ul>
+          <button class="nav_links-search_bar--search_button" type="submit">Поиск</button>
+        </div>
+        <div class="nav_links-search_bar--compare_links">
+          <div class="nav_links-search_bar--item_link deferred">
+            <img src="" alt="">
+            <div class="nav_links-search_bar--link_name">Отложить</div>
+          </div>
+          <div class="nav_links-search_bar--item_link compare">
+            <img src="" alt="">
+            <div class="nav_links-search_bar--link_name">Сравнение</div>
           </div>
         </div>
-      </section>
-      <section class="hot_news">
-        <h2>Горячие новинки</h2>
-        <ul class="hot_news-item_list">
-          <li><a href="http://">Слухи</a></li>
-          <li><a href="http://">Новые технологии</a></li>
-          <li><a href="http://">Гид по гаджетам</a></li>
-          <li><a href="http://">Слухи</a></li>
-          <li><a href="http://">Новы технологии</a></li>
-        </ul>
-        <div class="hot_news-items">
-          <div class="hot_news-item">
-            <a href="http://"><img src="" alt="" srcset=""/></a>
-            <div class="hot_news-item--header">
-              <h2>Xiaomi Mi 9T</h2>
-              <div class="hot_news-item--description">4 месяца назад</div>
-            </div>
-            <div class="hot_news-item--raiting">
-              <div class="hot_news-item--text_counter">7.4</div>
-              <div class="hot_news-item--stars_text">
-                <div class="hot_news-item--stars"></div>
-                <div class="hot_news-item--feedback">168 отзывов</div>
-              </div>
-            </div>
-            <div class="hot_news-item--features">
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  10ч. работы
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Камера на 21 МП
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Мощный процессор
-                </div>
-              </div>
-            </div>
+        <button class="nav_links-search_bar--enter_button" type="submit">Войти</button>
+      </div>
+      <div class="nav_links-category">
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Мобильные телефоны</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Топ 10</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Сравнение</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Лучшее</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Новости и обзоры</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Новости и обзоры</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Новости и обзоры</div>
+        </div>
+        <div class="nav_links-category--item">
+          <div class="nav_links-category--name">Новости и обзоры</div>
+        </div>
+      </div>
+    </header>
+    <section class="top_sales">
+      <div class="top_sales-new_phone">
+        <div class="top_sales-new_phone--block_name">
+          <h3>Сколько вы хотите потратить на свой следующий смартфон?</h3>
+          <p class="top_sales-new_phone--description">
+            Мы сравниваем характеристики и цены на мобильные телефоны и
+            планшеты
+          </p>
+        </div>
+        <div class="top_sales-new_phone--summ_total"></div>
+        <div class="top_sales-new_phone--brands">
+          <h4>По брендам</h4>
+          <ul class="top_sales-item_list">
+            <li><a href="http://">Samsung</a></li>
+            <li><a href="http://">Xiaomi</a></li>
+            <li><a href="http://">Redme</a></li>
+            <li><a href="http://">OnePlus</a></li>
+            <li><a href="http://">Apple</a></li>
+            <li><a href="http://">Vivo</a></li>
+            <li><a href="http://">OPPO</a></li>
+            <li><a href="http://">LG</a></li>
+            <li><a href="http://">Google</a></li>
+            <li><a href="http://">Asus</a></li>
+            <li><a href="http://">Lenovo</a></li>
+            <li><a href="http://">Sony</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="top_sales-items">
+        <h3>Топ продаж</h3>
+        <div class="top_sales-items--list">
+          <div class="top_sales-items--item">
+            <img src="" alt="">
+            <div class="top_sales-items--item_name">Samsung Galaxy M20</div>
+            <div class="top_sales-items--item_price">19,250</div>
           </div>
-          <div class="hot_news-item">
-            <a href="http://"><img src="" alt="" srcset=""/></a>
-            <div class="hot_news-item--header">
-              <h2>Xiaomi Mi 9T</h2>
-              <div class="hot_news-item--description">4 месяца назад</div>
-            </div>
-            <div class="hot_news-item--raiting">
-              <div class="hot_news-item--text_counter">7.4</div>
-              <div class="hot_news-item--stars_text">
-                <div class="hot_news-item--stars"></div>
-                <div class="hot_news-item--feedback">168 отзывов</div>
-              </div>
-            </div>
-            <div class="hot_news-item--features">
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  10ч. работы
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Камера на 21 МП
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Мощный процессор
-                </div>
-              </div>
-            </div>
+          <div class="top_sales-items--item">
+            <img src="" alt="">
+            <div class="top_sales-items--item_name">Xiaomi Mi 9</div>
+            <div class="top_sales-items--item_price">2,392</div>
           </div>
-          <div class="hot_news-item">
-            <a href="http://"><img src="" alt="" srcset=""/></a>
-            <div class="hot_news-item--header">
-              <h2>Xiaomi Mi 9T</h2>
-              <div class="hot_news-item--description">4 месяца назад</div>
-            </div>
-            <div class="hot_news-item--raiting">
-              <div class="hot_news-item--text_counter">7.4</div>
-              <div class="hot_news-item--stars_text">
-                <div class="hot_news-item--stars"></div>
-                <div class="hot_news-item--feedback">168 отзывов</div>
-              </div>
-            </div>
-            <div class="hot_news-item--features">
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  10ч. работы
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Камера на 21 МП
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Мощный процессор
-                </div>
-              </div>
-            </div>
+          <div class="top_sales-items--item">
+            <img src="" alt="">
+            <div class="top_sales-items--item_name">Redmi K20 Pro</div>
+            <div class="top_sales-items--item_price">42,021</div>
           </div>
-          <div class="hot_news-item">
-            <a href="http://"><img src="" alt="" srcset=""/></a>
-            <div class="hot_news-item--header">
-              <h2>Xiaomi Mi 9T</h2>
-              <div class="hot_news-item--description">4 месяца назад</div>
-            </div>
-            <div class="hot_news-item--raiting">
-              <div class="hot_news-item--text_counter">7.4</div>
-              <div class="hot_news-item--stars_text">
-                <div class="hot_news-item--stars"></div>
-                <div class="hot_news-item--feedback">168 отзывов</div>
-              </div>
-            </div>
-            <div class="hot_news-item--features">
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  10ч. работы
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Камера на 21 МП
-                </div>
-              </div>
-              <div class="hot_news-item--feature">
-                <img class="hot_news-item--feature_icon" src="" alt="" />
-                <div class="hot_news-item--feature-description">
-                  Мощный процессор
-                </div>
-              </div>
-            </div>
+          <div class="top_sales-items--item">
+            <img src="" alt="">
+            <div class="top_sales-items--item_name">Redmi note</div>
+            <div class="top_sales-items--item_price">7,982</div>
+          </div>
+          <div class="top_sales-items--item">
+            <img src="" alt="">
+            <div class="top_sales-items--item_name">OnePlus 7</div>
+            <div class="top_sales-items--item_price">2,312</div>
           </div>
         </div>
-      </section>
-      <section class="articles">
-        <h2>Статьи, обзоры, рекомендации</h2>
-        <ul class="articles-item_list">
-          <li><a href="http://">Гид по гаджетам</a></li>
-          <li><a href="http://">Слухи</a></li>
-          <li><a href="http://">Новые технологии</a></li>
-          <li><a href="http://">Гид по гаджетам</a></li>
-          <li><a href="http://">Слухи</a></li>
-        </ul>
-        <div class="articles-items">
-          <div class="article-items--article_item">
-            <div class="article-items--article_image">
-              <div class="article-items--image_title"></div>
-              <img src="" alt="" srcset="" />
-            </div>
-            <div class="article-items--article_title">
-              <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
-              <div class="article-items--article_description">
-                Лёгкий ультрабук Asus Zenbook 14 UX433FN
-              </div>
-            </div>
-            <div class="article-items--article_author">
-              <div class="article-items--author">
-                <img src="" alt="" />
-                <div class="article-items--author_name">Марина Атланова</div>
-              </div>
-              <div class="article-items--view_counter">
-                <img src="" alt="" />
-                <div class="article-items--counter">2,321</div>
-              </div>
-            </div>
+        <div class="top_sales-view_more_link">Смотреть полный список</div>
+      </div>
+    </section>
+    <section class="hot_news">
+      <h2>Горячие новинки</h2>
+      <ul class="hot_news-item_list">
+        <li><a href="http://">Слухи</a></li>
+        <li><a href="http://">Новые технологии</a></li>
+        <li><a href="http://">Гид по гаджетам</a></li>
+        <li><a href="http://">Слухи</a></li>
+        <li><a href="http://">Новы технологии</a></li>
+      </ul>
+      <div class="hot_news-items">
+        <div class="hot_news-item">
+          <a href="http://"><img src="" alt="" srcset="" /></a>
+          <div class="hot_news-item--header">
+            <h2>Xiaomi Mi 9T</h2>
+            <div class="hot_news-item--description">4 месяца назад</div>
           </div>
-          <div class="article-items--article_item">
-            <div class="article-items--article_image">
-              <div class="article-items--image_title"></div>
-              <img src="" alt="" srcset="" />
-            </div>
-            <div class="article-items--article_title">
-              <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
-              <div class="article-items--article_description">
-                Лёгкий ультрабук Asus Zenbook 14 UX433FN
-              </div>
-            </div>
-            <div class="article-items--article_author">
-              <div class="article-items--author">
-                <img src="" alt="" />
-                <div class="article-items--author_name">Марина Атланова</div>
-              </div>
-              <div class="article-items--view_counter">
-                <img src="" alt="" />
-                <div class="article-items--counter">2,321</div>
-              </div>
-            </div>
-          </div>
-          <div class="article-items--article_item">
-            <div class="article-items--article_image">
-              <div class="article-items--image_title"></div>
-              <img src="" alt="" srcset="" />
-            </div>
-            <div class="article-items--article_title">
-              <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
-              <div class="article-items--article_description">
-                Лёгкий ультрабук Asus Zenbook 14 UX433FN
-              </div>
-            </div>
-            <div class="article-items--article_author">
-              <div class="article-items--author">
-                <img src="" alt="" />
-                <div class="article-items--author_name">Марина Атланова</div>
-              </div>
-              <div class="article-items--view_counter">
-                <img src="" alt="" />
-                <div class="article-items--counter">2,321</div>
-              </div>
-            </div>
-          </div>
-          <div class="article-items--article_item">
-            <div class="article-items--article_image">
-              <div class="article-items--image_title"></div>
-              <img src="" alt="" srcset="" />
-            </div>
-            <div class="article-items--article_title">
-              <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
-              <div class="article-items--article_description">
-                Лёгкий ультрабук Asus Zenbook 14 UX433FN
-              </div>
-            </div>
-            <div class="article-items--article_author">
-              <div class="article-items--author">
-                <img src="" alt="" />
-                <div class="article-items--author_name">Марина Атланова</div>
-              </div>
-              <div class="article-items--view_counter">
-                <img src="" alt="" />
-                <div class="article-items--counter">2,321</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="feedback">
-        <div class="feedback-title">
-          <h2>Последние отзывы</h2>
-          <div class="feedback-title--show_more">Смотреть все</div>
-        </div>
-        <div class="feedback-items">
-          <div class="feedback-items--feedback_iteam">
-            <div class="feedback-items--image_raiting">
-              <img src="" alt="" />
+          <div class="hot_news-item--raiting">
+            <div class="hot_news-item--text_counter">7.4</div>
+            <div class="hot_news-item--stars_text">
               <div class="hot_news-item--stars"></div>
-            </div>
-            <div class="feedback-items--about">
-              <h4>Asus Zenbook 14 UX433FN</h4>
-              <div class="feedback-items--description">
-                Для не требовательного пользователя, неплохой аппарат в своей
-                ценовой категории, можно рекомендовать к покупке с бюджетом до
-                10 тыс...
-              </div>
-              <div class="article-items--article_author">Марина Атланова</div>
+              <div class="hot_news-item--feedback">168 отзывов</div>
             </div>
           </div>
-          <div class="feedback-items--feedback_iteam">
-            <div class="feedback-items--image_raiting">
-              <img src="" alt="" />
-              <div class="hot_news-item--stars"></div>
-            </div>
-            <div class="feedback-items--about">
-              <h4>Asus Zenbook 14 UX433FN</h4>
-              <div class="feedback-items--description">
-                Для не требовательного пользователя, неплохой аппарат в своей
-                ценовой категории, можно рекомендовать к покупке с бюджетом до
-                10 тыс...
+          <div class="hot_news-item--features">
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                10ч. работы
               </div>
-              <div class="article-items--article_author">Марина Атланова</div>
             </div>
-          </div>
-          <div class="feedback-items--feedback_iteam">
-            <div class="feedback-items--image_raiting">
-              <img src="" alt="" />
-              <div class="hot_news-item--stars"></div>
-            </div>
-            <div class="feedback-items--about">
-              <h4>Asus Zenbook 14 UX433FN</h4>
-              <div class="feedback-items--description">
-                Для не требовательного пользователя, неплохой аппарат в своей
-                ценовой категории, можно рекомендовать к покупке с бюджетом до
-                10 тыс...
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Камера на 21 МП
               </div>
-              <div class="article-items--article_author">Марина Атланова</div>
             </div>
-          </div>
-          <div class="feedback-items--feedback_iteam">
-            <div class="feedback-items--image_raiting">
-              <img src="" alt="" />
-              <div class="hot_news-item--stars"></div>
-            </div>
-            <div class="feedback-items--about">
-              <h4>Asus Zenbook 14 UX433FN</h4>
-              <div class="feedback-items--description">
-                Для не требовательного пользователя, неплохой аппарат в своей
-                ценовой категории, можно рекомендовать к покупке с бюджетом до
-                10 тыс...
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Мощный процессор
               </div>
-              <div class="article-items--article_author">Марина Атланова</div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="phone_by_char">
-        <h2>Найти смартфон по характеристикам</h2>
-        <ul class="phone_by_char-item_list">
-          <li><a href="http://">Большой экран</a></li>
-          <li><a href="http://">Мощаный процессор</a></li>
-          <li><a href="http://">Face ID</a></li>
-          <li><a href="http://">Большой экран</a></li>
-          <li><a href="http://">Мощный процессор</a></li>
-          <li><a href="http://">16 мп камера</a></li>
-          <li><a href="http://">6GB оперативной памяти</a></li>
-          <li><a href="http://">Большой экран</a></li>
-          <li><a href="http://">Мощный процессор</a></li>
-          <li><a href="http://">16 мп камера</a></li>
-          <li><a href="http://">Большой экран</a></li>
-          <li><a href="http://">Мощный процессор</a></li>
-          <li><a href="http://">16 мп камера</a></li>
-          <li><a href="http://">Большой экран</a></li>
-          <li><a href="http://">Мощный процессор</a></li>
-          <li><a href="http://">16 мп камера</a></li>
-          <li><a href="http://">Большой экран</a></li>
-          <li><a href="http://">Мощный процессор</a></li>
-        </ul>
-      </section>
-      <section class="best_brands">
-        <h2>Лучшие бренды</h2>
-        <div class="best_brands-items">
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
-          <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="hot_news-item">
+          <a href="http://"><img src="" alt="" srcset="" /></a>
+          <div class="hot_news-item--header">
+            <h2>Xiaomi Mi 9T</h2>
+            <div class="hot_news-item--description">4 месяца назад</div>
+          </div>
+          <div class="hot_news-item--raiting">
+            <div class="hot_news-item--text_counter">7.4</div>
+            <div class="hot_news-item--stars_text">
+              <div class="hot_news-item--stars"></div>
+              <div class="hot_news-item--feedback">168 отзывов</div>
+            </div>
+          </div>
+          <div class="hot_news-item--features">
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                10ч. работы
+              </div>
+            </div>
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Камера на 21 МП
+              </div>
+            </div>
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Мощный процессор
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-      <section class="interesting_videos">
-        <h2>Интересные видео-обзоры</h2>
-        <ul class="interesting_videos-item_list">
-          <li><a href="http://">Обзоры</a></li>
-          <li><a href="http://">Слухи</a></li>
-          <li><a href="http://">Новые технологии</a></li>
-          <li><a href="http://">Новости</a></li>
+        <div class="hot_news-item">
+          <a href="http://"><img src="" alt="" srcset="" /></a>
+          <div class="hot_news-item--header">
+            <h2>Xiaomi Mi 9T</h2>
+            <div class="hot_news-item--description">4 месяца назад</div>
+          </div>
+          <div class="hot_news-item--raiting">
+            <div class="hot_news-item--text_counter">7.4</div>
+            <div class="hot_news-item--stars_text">
+              <div class="hot_news-item--stars"></div>
+              <div class="hot_news-item--feedback">168 отзывов</div>
+            </div>
+          </div>
+          <div class="hot_news-item--features">
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                10ч. работы
+              </div>
+            </div>
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Камера на 21 МП
+              </div>
+            </div>
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Мощный процессор
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hot_news-item">
+          <a href="http://"><img src="" alt="" srcset="" /></a>
+          <div class="hot_news-item--header">
+            <h2>Xiaomi Mi 9T</h2>
+            <div class="hot_news-item--description">4 месяца назад</div>
+          </div>
+          <div class="hot_news-item--raiting">
+            <div class="hot_news-item--text_counter">7.4</div>
+            <div class="hot_news-item--stars_text">
+              <div class="hot_news-item--stars"></div>
+              <div class="hot_news-item--feedback">168 отзывов</div>
+            </div>
+          </div>
+          <div class="hot_news-item--features">
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                10ч. работы
+              </div>
+            </div>
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Камера на 21 МП
+              </div>
+            </div>
+            <div class="hot_news-item--feature">
+              <img class="hot_news-item--feature_icon" src="" alt="" />
+              <div class="hot_news-item--feature-description">
+                Мощный процессор
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="articles">
+      <h2>Статьи, обзоры, рекомендации</h2>
+      <ul class="articles-item_list">
+        <li><a href="http://">Гид по гаджетам</a></li>
+        <li><a href="http://">Слухи</a></li>
+        <li><a href="http://">Новые технологии</a></li>
+        <li><a href="http://">Гид по гаджетам</a></li>
+        <li><a href="http://">Слухи</a></li>
+      </ul>
+      <div class="articles-items">
+        <div class="article-items--article_item">
+          <div class="article-items--article_image">
+            <div class="article-items--image_title"></div>
+            <img src="" alt="" srcset="" />
+          </div>
+          <div class="article-items--article_title">
+            <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
+            <div class="article-items--article_description">
+              Лёгкий ультрабук Asus Zenbook 14 UX433FN
+            </div>
+          </div>
+          <div class="article-items--article_author author_block">
+            <div class="article-items--author author_block">
+              <img class="article-items--author_image author_image" src="" alt="" />
+              <div class="article-items--author_name author_name">Марина Атланова</div>
+            </div>
+            <div class="article-items--view_counter">
+              <img src="" alt="" />
+              <div class="article-items--counter">2,321</div>
+            </div>
+          </div>
+        </div>
+        <div class="article-items--article_item">
+          <div class="article-items--article_image">
+            <div class="article-items--image_title"></div>
+            <img src="" alt="" srcset="" />
+          </div>
+          <div class="article-items--article_title">
+            <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
+            <div class="article-items--article_description">
+              Лёгкий ультрабук Asus Zenbook 14 UX433FN
+            </div>
+          </div>
+          <div class="article-items--article_author author_block">
+            <div class="article-items--author author_block">
+              <img class="article-items--author_image author_image" src="" alt="" />
+              <div class="article-items--author_name author_name">Марина Атланова</div>
+            </div>
+            <div class="article-items--view_counter">
+              <img src="" alt="" />
+              <div class="article-items--counter">2,321</div>
+            </div>
+          </div>
+        </div>
+        <div class="article-items--article_item">
+          <div class="article-items--article_image">
+            <div class="article-items--image_title"></div>
+            <img src="" alt="" srcset="" />
+          </div>
+          <div class="article-items--article_title">
+            <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
+            <div class="article-items--article_description">
+              Лёгкий ультрабук Asus Zenbook 14 UX433FN
+            </div>
+          </div>
+          <div class="article-items--article_author author_block">
+            <div class="article-items--author author_block">
+              <img class="article-items--author_image author_image" src="" alt="" />
+              <div class="article-items--author_name author_name">Марина Атланова</div>
+            </div>
+            <div class="article-items--view_counter">
+              <img src="" alt="" />
+              <div class="article-items--counter">2,321</div>
+            </div>
+          </div>
+        </div>
+        <div class="article-items--article_item">
+          <div class="article-items--article_image">
+            <div class="article-items--image_title"></div>
+            <img src="" alt="" srcset="" />
+          </div>
+          <div class="article-items--article_title">
+            <h3>Легкий ультрабук Asus Zenbook 14 UX433FN</h3>
+            <div class="article-items--article_description">
+              Лёгкий ультрабук Asus Zenbook 14 UX433FN
+            </div>
+          </div>
+          <div class="article-items--article_author">
+            <div class="article-items--author author_block">
+              <img class="article-items--author_image author_image" src="" alt="" />
+              <div class="article-items--author_name author_name">Марина Атланова</div>
+            </div>
+            <div class="article-items--view_counter">
+              <img src="" alt="" />
+              <div class="article-items--counter">2,321</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback">
+      <div class="feedback-title">
+        <h2>Последние отзывы</h2>
+        <div class="feedback-title--show_more">Смотреть все</div>
+      </div>
+      <div class="feedback-items">
+        <div class="feedback-items--feedback_iteam">
+          <div class="feedback-items--image_raiting">
+            <img src="" alt="" />
+            <div class="hot_news-item--stars"></div>
+          </div>
+          <div class="feedback-items--about">
+            <h4>Asus Zenbook 14 UX433FN</h4>
+            <p class="feedback-items--description">
+              Для не требовательного пользователя, неплохой аппарат в своей
+              ценовой категории, можно рекомендовать к покупке с бюджетом до
+              10 тыс...
+            </p>
+            <div class="feedback-items--author author_block">
+              <img class="feedback-items--author_image author_image" src="" alt="" />
+              <div class="feedback-items--author_name author_name">Марина Атланова</div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-items--feedback_iteam">
+          <div class="feedback-items--image_raiting">
+            <img src="" alt="" />
+            <div class="hot_news-item--stars"></div>
+          </div>
+          <div class="feedback-items--about">
+            <h4>Asus Zenbook 14 UX433FN</h4>
+            <p class="feedback-items--description">
+              Для не требовательного пользователя, неплохой аппарат в своей
+              ценовой категории, можно рекомендовать к покупке с бюджетом до
+              10 тыс...
+            </p>
+            <div class="feedback-items--author author_block">
+              <img class="feedback-items--author_image author_image" src="" alt="" />
+              <div class="feedback-items--author_name author_name">Марина Атланова</div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-items--feedback_iteam">
+          <div class="feedback-items--image_raiting">
+            <img src="" alt="" />
+            <div class="hot_news-item--stars"></div>
+          </div>
+          <div class="feedback-items--about">
+            <h4>Asus Zenbook 14 UX433FN</h4>
+            <p class="feedback-items--description">
+              Для не требовательного пользователя, неплохой аппарат в своей
+              ценовой категории, можно рекомендовать к покупке с бюджетом до
+              10 тыс...
+            </p>
+            <div class="feedback-items--author author_block">
+              <img class="feedback-items--author_image author_image" src="" alt="" />
+              <div class="feedback-items--author_name author_name">Марина Атланова</div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-items--feedback_iteam">
+          <div class="feedback-items--image_raiting">
+            <img src="" alt="" />
+            <div class="hot_news-item--stars"></div>
+          </div>
+          <div class="feedback-items--about">
+            <h4>Asus Zenbook 14 UX433FN</h4>
+            <p class="feedback-items--description">
+              Для не требовательного пользователя, неплохой аппарат в своей
+              ценовой категории, можно рекомендовать к покупке с бюджетом до
+              10 тыс...
+            </p>
+            <div class="feedback-items--author author_block">
+              <img class="feedback-items--author_image author_image" src="" alt="" />
+              <div class="feedback-items--author_name author_name">Марина Атланова</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="phone_by_char">
+      <h2>Найти смартфон по характеристикам</h2>
+      <ul class="phone_by_char-item_list">
+        <li><a href="http://">Большой экран</a></li>
+        <li><a href="http://">Мощаный процессор</a></li>
+        <li><a href="http://">Face ID</a></li>
+        <li><a href="http://">Большой экран</a></li>
+        <li><a href="http://">Мощный процессор</a></li>
+        <li><a href="http://">16 мп камера</a></li>
+        <li><a href="http://">6GB оперативной памяти</a></li>
+        <li><a href="http://">Большой экран</a></li>
+        <li><a href="http://">Мощный процессор</a></li>
+        <li><a href="http://">16 мп камера</a></li>
+        <li><a href="http://">Большой экран</a></li>
+        <li><a href="http://">Мощный процессор</a></li>
+        <li><a href="http://">16 мп камера</a></li>
+        <li><a href="http://">Большой экран</a></li>
+        <li><a href="http://">Мощный процессор</a></li>
+        <li><a href="http://">16 мп камера</a></li>
+        <li><a href="http://">Большой экран</a></li>
+        <li><a href="http://">Мощный процессор</a></li>
+      </ul>
+    </section>
+    <section class="best_brands">
+      <h2>Лучшие бренды</h2>
+      <div class="best_brands-items">
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+        <div class="best_brands-items--brand"><img src="" alt="" /></div>
+      </div>
+    </section>
+    <section class="interesting_videos">
+      <h2>Интересные видео-обзоры</h2>
+      <ul class="interesting_videos-item_list">
+        <li><a href="http://">Обзоры</a></li>
+        <li><a href="http://">Слухи</a></li>
+        <li><a href="http://">Новые технологии</a></li>
+        <li><a href="http://">Новости</a></li>
+      </ul>
+      <div class="interesting_videos-items">
+        <div class="interesting_videos-items-video_item">
+          <div class="interesting_videos-items--video">
+            <div class="interesting_videos-items--video_title">Обзор ноутбука Asus</div>
+            <div class="interesting_videos-items--play_video"></div>
+            <div class="interesting_videos-items--view_counter">
+              <div class="interesting_videos-items--view_icon"></div>
+              <div class="interesting_videos-items--counter">2,312</div>
+            </div>
+          </div>
+          <p class="interesting_videos-items--description">Лёгкий ультрабук Asus Zenbook 14 UX433FN в прекрасном новом
+            обзоре от богатого блогера</p>
+          <div class="interesting_videos-items--author author_block">
+            <img class="interesting_videos--author_image author_image" src="" alt="" />
+            <div class="interesting_videos--author_name author_name">Марина Атланова</div>
+          </div>
+        </div>
+        <div class="interesting_videos-items-video_item">
+          <div class="interesting_videos-items--video">
+            <div class="interesting_videos-items--video_title">Обзор ноутбука Asus</div>
+            <div class="interesting_videos-items--play_video"></div>
+            <div class="interesting_videos-items--view_counter">
+              <div class="interesting_videos-items--view_icon"></div>
+              <div class="interesting_videos-items--counter">2,312</div>
+            </div>
+          </div>
+          <p class="interesting_videos-items--description">Лёгкий ультрабук Asus Zenbook 14 UX433FN в прекрасном новом
+            обзоре от богатого блогера</p>
+          <div class="interesting_videos-items--author author_block">
+            <img class="interesting_videos--author_image author_image" src="" alt="" />
+            <div class="interesting_videos--author_name author_name">Марина Атланова</div>
+          </div>
+        </div>
+        <div class="interesting_videos-items-video_item">
+          <div class="interesting_videos-items--video">
+            <div class="interesting_videos-items--video_title">Обзор ноутбука Asus</div>
+            <div class="interesting_videos-items--play_video"></div>
+            <div class="interesting_videos-items--view_counter">
+              <div class="interesting_videos-items--view_icon"></div>
+              <div class="interesting_videos-items--counter">2,312</div>
+            </div>
+          </div>
+          <p class="interesting_videos-items--description">Лёгкий ультрабук Asus Zenbook 14 UX433FN в прекрасном новом
+            обзоре от богатого блогера</p>
+          <div class="interesting_videos-items--author author_block">
+            <img class="interesting_videos--author_image author_image" src="" alt="" />
+            <div class="interesting_videos--author_name author_name">Марина Атланова</div>
+          </div>
+        </div>
+        <div class="interesting_videos-items-video_item">
+          <div class="interesting_videos-items--video">
+            <div class="interesting_videos-items--video_title">Обзор ноутбука Asus</div>
+            <div class="interesting_videos-items--play_video"></div>
+            <div class="interesting_videos-items--view_counter">
+              <div class="interesting_videos-items--view_icon"></div>
+              <div class="interesting_videos-items--counter">2,312</div>
+            </div>
+          </div>
+          <p class="interesting_videos-items--description">Лёгкий ультрабук Asus Zenbook 14 UX433FN в прекрасном новом
+            обзоре от богатого блогера</p>
+          <div class="interesting_videos-items--author author_block">
+            <img class="interesting_videos--author_image author_image" src="" alt="" />
+            <div class="interesting_videos--author_name author_name">Марина Атланова</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="how_to_use">
+      <h2>Как пользоваться сайтом</h2>
+      <p>Каталог — многофункциональный сервис поиска товаров в интернет-магазинах и сравнения цен. Он охватывает самые
+        разнообразные категории товаров: электроника, компьютеры, бытовая техника, автотовары, оборудование для ремонта
+        и строительства, туристическое снаряжение, детские товары и многое другое. </p>
+      <p>Наша задача - помочь покупателю быстро и удобно найти самое выгодное предложение. Для тех, кто определяется с
+        выбором, в каждом разделе есть подбор по параметрам и возможность сравнить товары между собой. Доступен и
+        удобный текстовый поиск, позволяющий искать как нужные разделы, так и конкретные товары по названию. А на
+        странице каждой модели есть подробная информация, которая поможет принять решение: описание, технические
+        характеристики, фото и видео, полезные ссылки и отзывы. Там же находится блок «Где купить?» со списком
+        интернет-магазинов, ценами и прямыми ссылками на страницу покупки.</p>
+      <p>К системе E-Katalog подключено более 1000 магазинов, данные по которым постоянно обновляются. Благодаря этому
+        вы сможете не только выбрать подходящий товар, но и купить его по самым выгодным условиям!</p>
+    </section>
+    <footer class="footer_links">
+      <div class="footer_links-link_list">
+        <div class="footer_links-link_list--item">
+          <h4 class="footer_links-link_list--item_header">Меню</h4>
+          <ul>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+          </ul>
+        </div>
+        <div class="footer_links-link_list--item">
+          <h4 class="footer_links-link_list--item_header">Меню</h4>
+          <ul>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+          </ul>
+        </div>
+        <div class="footer_links-link_list--item">
+          <h4 class="footer_links-link_list--item_header">Меню</h4>
+          <ul>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+          </ul>
+        </div>
+        <div class="footer_links-link_list--item">
+          <h4 class="footer_links-link_list--item_header">Меню</h4>
+          <ul>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+            <li><a href="http://">text</a></li>
+          </ul>
+        </div>
+        <div class="footer_links-link_list--item">
+          <div class="footer_links-link_list--social_links"><img src="" alt=""></div>
+        </div>
+      </div>
+      <div class="footer_links-copyright_block">
+        <div class="footer_links-copyright">Catalog © 2015 - 2017 admin@support.com</div>
+        <ul class="footer_links-item_list">
+          <li><a href="http://">Контакты</a></li>
+          <li><a href="http://">Реклама</a></li>
+          <li><a href="http://">Идеи и предложения</a></li>
+          <li><a href="http://">Помощь проекту</a></li>
         </ul>
-      </section>
-      <section class="how_to_use"></section>
-      <footer></footer>
-    </div>
-  </body>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

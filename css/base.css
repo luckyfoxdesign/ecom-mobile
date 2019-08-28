@@ -2,7 +2,7 @@ h1, h2, h3, h4 {
   margin: 0;
   color: #333333; }
 
-.top_sales-item_list, .hot_news-item_list, .articles-item_list, .phone_by_char-item_list, .interesting_videos-item_list {
+.top_sales-item_list, .hot_news-item_list, .articles-item_list, .phone_by_char-item_list, .interesting_videos-item_list, .footer_links-item_list {
   margin: 0;
   padding: 0; }
 
@@ -18,37 +18,53 @@ h1, h2, h3, h4 {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+.nav_links-category--name:after {
+  content: "\f0c4"; }
+
 .top_sales-item_list li {
   display: inline; }
   .top_sales-item_list li a {
     text-decoration: underline; }
-  .top_sales-item_list li:hover {
-    background-color: #333333; }
+    .top_sales-item_list li a:hover {
+      color: #333333;
+      cursor: pointer; }
 
 .hot_news-item_list li {
   display: inline; }
   .hot_news-item_list li a {
     text-decoration: none; }
-  .hot_news-item_list li:hover {
-    background-color: #333333; }
+    .hot_news-item_list li a:hover {
+      color: #333333;
+      cursor: pointer; }
 
 .articles-item_list li {
   display: inline; }
   .articles-item_list li a {
     text-decoration: none; }
-  .articles-item_list li:hover {
-    background-color: #333333; }
+    .articles-item_list li a:hover {
+      color: #333333;
+      cursor: pointer; }
 
 .phone_by_char-item_list li {
   display: inline; }
   .phone_by_char-item_list li a {
     text-decoration: none; }
-  .phone_by_char-item_list li:hover {
-    background-color: #333333; }
+    .phone_by_char-item_list li a:hover {
+      color: #333333;
+      cursor: pointer; }
 
 .interesting_videos-item_list li {
   display: inline; }
   .interesting_videos-item_list li a {
     text-decoration: none; }
-  .interesting_videos-item_list li:hover {
-    background-color: #333333; }
+    .interesting_videos-item_list li a:hover {
+      color: #333333;
+      cursor: pointer; }
+
+.footer_links-item_list li {
+  display: inline; }
+  .footer_links-item_list li a {
+    text-decoration: none; }
+    .footer_links-item_list li a:hover {
+      color: #333333;
+      cursor: pointer; }

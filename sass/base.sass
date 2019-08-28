@@ -9,6 +9,12 @@
     justify-content: flex-start
     flex-direction: column
 
+.nav_links
+    &-category
+        &--name
+            &:after
+                content: "\f0c4"
+
 .top_sales
     &-item_list
         @include item_list(underline, $grey33)
@@ -26,5 +32,9 @@
         @include item_list(none, $grey33)
 
 .interesting_videos
+    &-item_list
+        @include item_list(none, $grey33)
+
+.footer_links
     &-item_list
         @include item_list(none, $grey33)
