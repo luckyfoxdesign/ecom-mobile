@@ -2,24 +2,40 @@ h1, h2, h3, h4 {
   margin: 0;
   color: #333333; }
 
-.top_sales-item_list, .hot_news-item_list, .articles-item_list, .phone_by_char-item_list, .interesting_videos-item_list, .footer_links-item_list {
+.top_sales-item_list, .hot_news-item_list, .see_all-item_list, .phone_by_char-item_list, .interesting_videos-item_list, .footer_links-item_list {
   margin: 0;
   padding: 0; }
 
-.wrapper {
+body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
-.nav_links-category--name:after {
-  content: "\f0c4"; }
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+  justify-items: flex-start;
+  width: 1200px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: (10)[1fr];
+  grid-template-rows: repeat(1fr, 10); }
+
+.nav_links-category {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-columns: (auto)[8];
+  grid-template-columns: repeat(8, auto); }
+  .nav_links-category--name {
+    padding: 12px; }
+    .nav_links-category--name:after {
+      content: "\f0c4"; }
 
 .top_sales-item_list li {
   display: inline; }
@@ -37,13 +53,44 @@ h1, h2, h3, h4 {
       color: #333333;
       cursor: pointer; }
 
-.articles-item_list li {
-  display: inline; }
-  .articles-item_list li a {
-    text-decoration: none; }
-    .articles-item_list li a:hover {
-      color: #333333;
-      cursor: pointer; }
+.article-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-columns: (minmax(260px, 1fr))[4];
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  grid-column-gap: 24px; }
+  .article-items--article_image {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    margin-bottom: 12px; }
+  .article-items--image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px; }
+  .article-items--image_title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 3px 4px 3px 4px;
+    color: #ffffff; }
+  .article-items--article_title {
+    width: 100%; }
+
+.see_around {
+  background-color: #FFA300; }
+
+.see_all {
+  background-color: #673AB7; }
+  .see_all-item_list li {
+    display: inline; }
+    .see_all-item_list li a {
+      text-decoration: none; }
+      .see_all-item_list li a:hover {
+        color: #333333;
+        cursor: pointer; }
 
 .phone_by_char-item_list li {
   display: inline; }

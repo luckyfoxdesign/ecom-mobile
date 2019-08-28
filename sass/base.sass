@@ -4,14 +4,29 @@
 @import "common"
 @import "media"
 
-.wrapper
+body
     display: flex
-    justify-content: flex-start
-    flex-direction: column
+    justify-content: center
+
+.wrapper
+    display: grid
+    overflow: hidden
+    justify-items: flex-start
+    width: 1200px
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(1fr, 10)
 
 .nav_links
     &-category
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: repeat(8, auto)
+
+        &--item
+            
+        
         &--name
+            padding: 12px
             &:after
                 content: "\f0c4"
 
@@ -23,9 +38,41 @@
     &-item_list
         @include item_list(none, $grey33)
 
-.articles
+.article
+    &-items
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: repeat(4, minmax(260px, 1fr))
+        grid-column-gap: 24px
+        
+        &--article_image
+            position: relative
+            height: 160px
+            width: 100%
+            margin-bottom: 12px
+        &--image
+            width: 100%
+            height: 100%
+            border-radius: 4px
+        &--image_title
+            position: absolute
+            left: 0
+            bottom: 0
+            padding: 3px 4px 3px 4px
+            color: $white
+
+        &--article_title
+            width: 100%
+
+.see_around
+    background-color: $orange
+
+.see_all
+    background-color: $violet
+
     &-item_list
         @include item_list(none, $grey33)
+
 
 .phone_by_char
     &-item_list
