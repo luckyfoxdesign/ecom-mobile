@@ -11,3 +11,9 @@
             &:hover
                 color: $hover_color
                 cursor: pointer
+
+@mixin new_grid($row, $column, $gap_column)
+    display: grid
+    grid-template-rows: $row
+    grid-template-columns: $column
+    grid-column-gap: $gap_column

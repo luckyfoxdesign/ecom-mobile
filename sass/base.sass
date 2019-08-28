@@ -5,15 +5,15 @@
 @import "media"
 
 body
-    display: flex
+    display: grid
     justify-content: center
 
 .wrapper
     display: grid
     overflow: hidden
     justify-items: flex-start
-    width: 1200px
-    grid-template-columns: 1fr
+    // width: 1600px
+    grid-template-columns: minmax(432px, 1200px)
     grid-template-rows: repeat(1fr, 10)
 
 .nav_links
@@ -35,15 +35,16 @@ body
         @include item_list(underline, $grey33)
 
 .hot_news
+    &-items
+        @include new_grid(1fr, repeat(4, 1fr), 24px)
+    &-item
+        padding: 24px
     &-item_list
         @include item_list(none, $grey33)
 
 .article
     &-items
-        display: grid
-        grid-template-rows: 1fr
-        grid-template-columns: repeat(4, minmax(260px, 1fr))
-        grid-column-gap: 24px
+        @include new_grid(1fr, repeat(4, minmax(260px, 1fr)), 24px)
         
         &--article_image
             position: relative

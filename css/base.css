@@ -7,9 +7,8 @@ h1, h2, h3, h4 {
   padding: 0; }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
@@ -19,9 +18,8 @@ body {
   display: grid;
   overflow: hidden;
   justify-items: flex-start;
-  width: 1200px;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: minmax(432px, 1200px);
+  grid-template-columns: minmax(432px, 1200px);
   -ms-grid-rows: (10)[1fr];
   grid-template-rows: repeat(1fr, 10); }
 
@@ -44,6 +42,18 @@ body {
     .top_sales-item_list li a:hover {
       color: #333333;
       cursor: pointer; }
+
+.hot_news-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px; }
+
+.hot_news-item {
+  padding: 24px; }
 
 .hot_news-item_list li {
   display: inline; }
