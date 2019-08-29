@@ -1,9 +1,9 @@
-// @font-face
-//     font-family: 'SSP_Black'
-//     src: local('SSP_Black'), local('SSP Black'), url('../fonts/sourcesanspro-black-webfont.woff2') format('woff2'),
-//     url('../fonts/sourcesanspro-black-webfont.woff') format('woff')
-//     font-weight: normal
-//     font-style: normal
+@font-face
+    font-family: 'SSP_Black'
+    src: local('SSP_Black'), local('SSP Black'), url('../fonts/sourcesanspro-black-webfont.woff2') format('woff2'),
+    url('../fonts/sourcesanspro-black-webfont.woff') format('woff')
+    font-weight: normal
+    font-style: normal
 
 // @font-face
 //     font-family: 'source_sans_probold'
@@ -41,7 +41,10 @@
 //     font-style: normal
 
 h1,h2,h3,h4
-    margin: 0
-    //font-family: 'SSP_Black'
-    //font-weight: 600
+    @extend %mp0
+    font-family: 'SSP_Black'
+    font-weight: 600
     color: $grey33
+
+a
+    @extend %mp0

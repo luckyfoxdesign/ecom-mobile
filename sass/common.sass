@@ -6,6 +6,8 @@
     @extend %mp0
     li
         display: inline
+        &:not(:first-child)
+            margin-left: 16px
         a
             text-decoration: $td
             &:hover
