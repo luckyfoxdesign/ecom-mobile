@@ -21,7 +21,7 @@
     //justify-items: flex-start
     // width: 1600px
     grid-template-columns: 1fr
-    grid-template-rows: repeat(1fr, 10)
+    grid-template-rows: repeat(10, 1fr)
 
 .nav_links
     &-category
@@ -43,7 +43,7 @@
 
 .hot_news
     margin-bottom: $header_bottom_margin
-    padding: 32px 0 40px 0
+    padding: 32px 24px 40px 24px
     background-color: #F5F6F9
     width: 100vw
     display: flex
@@ -53,6 +53,29 @@
         grid-template-rows: 1fr
         grid-template-columns: repeat(4, 260px)
         grid-column-gap: 24px
+
+        @media screen and (max-width: $break_large)
+            grid-template-rows: 1fr 1fr
+            grid-template-columns: repeat(3, 260px)
+            .hot_news
+                &-item
+                    &:nth-child(4)
+                        margin-top: 24px
+
+        @media screen and (max-width: $break_medium)
+            grid-template-columns: repeat(2, 260px)
+            .hot_news
+                &-item
+                    &:nth-child(3)
+                        margin-top: 24px
+
+        @media screen and (max-width: $break_small)
+            grid-template-rows: repeat(4, 1fr)
+            grid-template-columns: 260px
+            .hot_news
+                &-item
+                    &:nth-child(2)
+                        margin-top: 24px
     &-item
         padding: 24px
         background-color: $white

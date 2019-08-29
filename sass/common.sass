@@ -2,6 +2,15 @@
     margin: 0
     padding: 0
 
+h1,h2,h3,h4
+    @extend %mp0
+    font-family: 'SSP_Black'
+    font-weight: 600
+    color: $grey33
+
+a
+    @extend %mp0
+
 @mixin item_list($td, $hover_color)
     @extend %mp0
     li

@@ -4,14 +4,14 @@
   font-weight: normal;
   font-style: normal; }
 
+h1, h2, h3, h4, a, .top_sales-item_list, .hot_news-item_list, .article-item_list, .phone_by_char-item_list, .interesting_videos-item_list, .footer_links-item_list {
+  margin: 0;
+  padding: 0; }
+
 h1, h2, h3, h4 {
   font-family: 'SSP_Black';
   font-weight: 600;
   color: #333333; }
-
-h1, h2, h3, h4, a, .top_sales-item_list, .hot_news-item_list, .article-item_list, .phone_by_char-item_list, .interesting_videos-item_list, .footer_links-item_list {
-  margin: 0;
-  padding: 0; }
 
 .hot_news-item--img img {
   position: absolute;
@@ -58,8 +58,8 @@ h1, h2, h3, h4, a, .top_sales-item_list, .hot_news-item_list, .article-item_list
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -ms-grid-rows: (10)[1fr];
-  grid-template-rows: repeat(1fr, 10); }
+  -ms-grid-rows: (1fr)[10];
+  grid-template-rows: repeat(10, 1fr); }
 
 .nav_links-category {
   display: -ms-grid;
@@ -85,7 +85,7 @@ h1, h2, h3, h4, a, .top_sales-item_list, .hot_news-item_list, .article-item_list
 
 .hot_news {
   margin-bottom: 64px;
-  padding: 32px 0 40px 0;
+  padding: 32px 24px 40px 24px;
   background-color: #F5F6F9;
   width: 100vw;
   display: -webkit-box;
@@ -102,6 +102,28 @@ h1, h2, h3, h4, a, .top_sales-item_list, .hot_news-item_list, .article-item_list
     -ms-grid-columns: (260px)[4];
     grid-template-columns: repeat(4, 260px);
     grid-column-gap: 24px; }
+    @media screen and (max-width: 1156px) {
+      .hot_news-items {
+        -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        -ms-grid-columns: (260px)[3];
+        grid-template-columns: repeat(3, 260px); }
+        .hot_news-items .hot_news-item:nth-child(4) {
+          margin-top: 24px; } }
+    @media screen and (max-width: 880px) {
+      .hot_news-items {
+        -ms-grid-columns: (260px)[2];
+        grid-template-columns: repeat(2, 260px); }
+        .hot_news-items .hot_news-item:nth-child(3) {
+          margin-top: 24px; } }
+    @media screen and (max-width: 586px) {
+      .hot_news-items {
+        -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        -ms-grid-columns: 260px;
+        grid-template-columns: 260px; }
+        .hot_news-items .hot_news-item:nth-child(2) {
+          margin-top: 24px; } }
   .hot_news-item {
     padding: 24px;
     background-color: #ffffff;
