@@ -14,6 +14,15 @@
                 color: $hover_color
                 cursor: pointer
 
+%image_center
+    img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        max-width: 100%
+        max-height: 100%
+
 @mixin new_grid($row, $column, $gap_column)
     display: grid
     grid-template-rows: $row
