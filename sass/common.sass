@@ -11,7 +11,7 @@ h1,h2,h3,h4
 a
     @extend %mp0
 
-@mixin item_list($td, $hover_color)
+@mixin item_list($td, $hover_color, $link_color)
     @extend %mp0
     li
         display: inline
@@ -19,6 +19,7 @@ a
             margin-left: 16px
         a
             text-decoration: $td
+            color: $link_color
             &:hover
                 color: $hover_color
                 cursor: pointer

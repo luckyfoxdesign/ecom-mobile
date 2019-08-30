@@ -59,8 +59,8 @@ h1, h2, h3, h4 {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[10];
-  grid-template-rows: repeat(10, 1fr); }
+  -ms-grid-rows: (auto)[10];
+  grid-template-rows: repeat(10, auto); }
 
 .nav_links-category {
   display: -ms-grid;
@@ -83,6 +83,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   background-color: #F5F6F9; }
   .top_sales-wrapper {
+    margin-top: 32px;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: auto;
@@ -96,20 +97,65 @@ h1, h2, h3, h4 {
     -ms-grid-column-span: 3;
     grid-column-end: 4;
     background-color: #4141BE;
-    padding: 24px; }
+    padding: 32px;
+    border-radius: 4px; }
+    .top_sales-new_phone--block_name p {
+      color: #ffffff;
+      margin: 8px 0 40px 0; }
     .top_sales-new_phone--block_header {
       color: #ffffff; }
+    .top_sales-new_phone--brands_header {
+      color: #ffffff;
+      margin-bottom: 12px; }
+    .top_sales-new_phone--sum_total {
+      height: 40px;
+      margin-bottom: 40px;
+      background-color: rgba(29, 255, 233, 0.15);
+      border-radius: 2px;
+      position: relative; }
+    .top_sales-new_phone--progress {
+      width: 30%;
+      height: 100%;
+      border: 2px solid #ffffff;
+      border-radius: 3px;
+      position: absolute;
+      top: -2px;
+      left: 0; }
+    .top_sales-new_phone--mark {
+      position: absolute;
+      right: -12px;
+      bottom: 7px;
+      width: 24px;
+      height: 24px;
+      background-color: #ffffff;
+      border-radius: 50%; }
   .top_sales-items {
     background-color: #ffffff;
-    padding: 24px; }
+    padding: 24px;
+    border-radius: 4px; }
+    .top_sales-items--item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+    .top_sales-items--item_price {
+      margin-left: auto; }
+  .top_sales-view_more_link {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px; }
   .top_sales-item_list li {
     display: inline; }
     .top_sales-item_list li:not(:first-child) {
       margin-left: 16px; }
     .top_sales-item_list li a {
-      text-decoration: underline; }
+      text-decoration: underline;
+      color: #ffffff; }
       .top_sales-item_list li a:hover {
-        color: #333333;
+        color: #ffffff;
         cursor: pointer; }
 
 .hot_news {
@@ -199,7 +245,8 @@ h1, h2, h3, h4 {
       .hot_news-item_list li:not(:first-child) {
         margin-left: 16px; }
       .hot_news-item_list li a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #4141BE; }
         .hot_news-item_list li a:hover {
           color: #333333;
           cursor: pointer; }
@@ -213,7 +260,8 @@ h1, h2, h3, h4 {
       .article-item_list li:not(:first-child) {
         margin-left: 16px; }
       .article-item_list li a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #4141BE; }
         .article-item_list li a:hover {
           color: #333333;
           cursor: pointer; }
@@ -255,7 +303,8 @@ h1, h2, h3, h4 {
   .phone_by_char-item_list li:not(:first-child) {
     margin-left: 16px; }
   .phone_by_char-item_list li a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #4141BE; }
     .phone_by_char-item_list li a:hover {
       color: #333333;
       cursor: pointer; }
@@ -265,7 +314,8 @@ h1, h2, h3, h4 {
   .interesting_videos-item_list li:not(:first-child) {
     margin-left: 16px; }
   .interesting_videos-item_list li a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #4141BE; }
     .interesting_videos-item_list li a:hover {
       color: #333333;
       cursor: pointer; }
@@ -275,7 +325,8 @@ h1, h2, h3, h4 {
   .footer_links-item_list li:not(:first-child) {
     margin-left: 16px; }
   .footer_links-item_list li a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #4141BE; }
     .footer_links-item_list li a:hover {
       color: #333333;
       cursor: pointer; }
