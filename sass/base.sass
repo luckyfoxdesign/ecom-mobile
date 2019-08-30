@@ -14,12 +14,10 @@
     height: 100vh
     // display: flex
     // justify-content: center
+    overflow-y: scroll
 
 .wrapper
     display: grid
-    //overflow: hidden
-    //justify-items: flex-start
-    // width: 1600px
     grid-template-columns: 1fr
     grid-template-rows: repeat(10, 1fr)
 
@@ -38,44 +36,37 @@
                 content: "\f0c4"
 
 .top_sales
+    display: flex
+    justify-content: center
+    //margin-bottom: $header_bottom_margin
+    background-color: $bg_blue
+    &-wrapper
+        @include new_grid(auto, repeat(4, 260px), 24px)
+    &-new_phone
+        grid-column-start: 1
+        grid-column-end: 4
+        background-color: $blue
+        padding: 24px
+        &--block_header
+            color: $white
+    &-items
+        background-color: $white
+        padding: 24px
     &-item_list
         @include item_list(underline, $grey33)
 
 .hot_news
     margin-bottom: $header_bottom_margin
-    padding: 32px 24px 40px 24px
-    background-color: #F5F6F9
-    width: 100vw
+    background-color: $bg_blue
+    // width: 100vw
     display: flex
     justify-content: center
+    &-wrapper
+        margin: 32px 24px 40px 24px
     &-items
-        display: grid
-        grid-template-rows: 1fr
-        grid-template-columns: repeat(4, 260px)
-        grid-column-gap: 24px
-
-        @media screen and (max-width: $break_large)
-            grid-template-rows: 1fr 1fr
-            grid-template-columns: repeat(3, 260px)
-            .hot_news
-                &-item
-                    &:nth-child(4)
-                        margin-top: 24px
-
-        @media screen and (max-width: $break_medium)
-            grid-template-columns: repeat(2, 260px)
-            .hot_news
-                &-item
-                    &:nth-child(3)
-                        margin-top: 24px
-
-        @media screen and (max-width: $break_small)
-            grid-template-rows: repeat(4, 1fr)
-            grid-template-columns: 260px
-            .hot_news
-                &-item
-                    &:nth-child(2)
-                        margin-top: 24px
+        @include new_grid(1fr, repeat(4, 260px), 24px)
+        overflow-x: scroll
+        scroll-snap-type: x proximity
     &-item
         padding: 24px
         background-color: $white
