@@ -8,13 +8,13 @@ h1,h2,h3,h4
     font-weight: 600
     color: $grey33
 
-a
+a, ul
     @extend %mp0
 
 @mixin item_list($td, $hover_color, $link_color)
     @extend %mp0
     li
-        display: inline
+        display: inline-block
         &:not(:first-child)
             margin-left: 16px
         a
@@ -32,6 +32,18 @@ a
         transform: translate(-50%, -50%)
         max-width: 100%
         max-height: 100%
+        object-fit: cover
+
+%flex_center
+    display: flex
+    justify-content: center
+
+@mixin pos_abs($t:null, $r:null, $b:null, $l:null)
+    position: absolute
+    top: $t
+    right: $r
+    bottom: $b
+    left: $l
 
 @mixin new_grid($row, $column, $gap_column)
     display: grid
@@ -39,16 +51,44 @@ a
     grid-template-columns: $column
     grid-column-gap: $gap_column
 
+@mixin column_start($start, $end)
+    grid-column-start: $start
+    grid-column-end: $end
+
+// .author_block
+//     display: flex
+//     flex-direction: row
+//     align-items: center
+//     .author_image
+//         margin-right: 12px
+//         border-radius: 50%
+//         width: 24px
+//         height: 24px
+//     .author_name
+//         color: $blue
+
 .author_block
     display: flex
     flex-direction: row
     align-items: center
-    .author_image
+    .ls
         margin-right: 12px
-        border-radius: 24px
-    .view_counter
-        display: flex
-        flex-direction: row
-        margin-left: auto
-        .counter
-            margin-left: 4px
+        width: 24px
+        height: 24px
+        overflow: hidden
+        // padding-bottom: 56.25%
+        position: relative
+        border-radius: 50%
+        .author_image
+            position: absolute
+            top: -50%
+            left: -50%
+            //width: 100%
+    .author_name
+        color: $blue
+
+%view_counter
+    display: flex
+    flex-direction: row
+    .counter
+        margin-left: 4px
