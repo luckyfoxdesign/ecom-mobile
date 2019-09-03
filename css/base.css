@@ -45,16 +45,21 @@ h1, h2, h3, h4 {
   -ms-flex-align: center;
   align-items: center; }
   .author_block .ls {
-    margin-right: 12px;
-    width: 24px;
     height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
     overflow: hidden;
-    position: relative;
-    border-radius: 50%; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     .author_block .ls .author_image {
-      position: absolute;
-      top: -50%;
-      left: -50%; }
+      display: block;
+      height: 100%;
+      text-align: center; }
   .author_block .author_name {
     color: #4141BE; }
 
