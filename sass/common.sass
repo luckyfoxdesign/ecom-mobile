@@ -38,6 +38,12 @@ a, ul
     display: flex
     justify-content: center
 
+@mixin flex_display($fd: null, $jc: null, $ai: null)
+    display: flex
+    flex-direction: $fd
+    justify-content: $jc
+    align-items: $ai
+
 @mixin pos_abs($t:null, $r:null, $b:null, $l:null)
     position: absolute
     top: $t
@@ -85,6 +91,20 @@ a, ul
             text-align: center
     .author_name
         color: $blue
+
+.image_block
+    @include flex_display($jc: center)
+    height: 158px
+    width: 280px
+    overflow: hidden
+    background-color: #333
+    .bg_image
+        display: block
+        height: 100%
+        background-color: #333
+        color: #333
+        // width: 100%
+
 
 %view_counter
     display: flex
