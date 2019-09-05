@@ -32,7 +32,11 @@ a, ul
         transform: translate(-50%, -50%)
         max-width: 100%
         max-height: 100%
-        object-fit: cover
+
+%ellips
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
 
 %flex_center
     display: flex
@@ -61,18 +65,6 @@ a, ul
     grid-column-start: $start
     grid-column-end: $end
 
-// .author_block
-//     display: flex
-//     flex-direction: row
-//     align-items: center
-//     .author_image
-//         margin-right: 12px
-//         border-radius: 50%
-//         width: 24px
-//         height: 24px
-//     .author_name
-//         color: $blue
-
 .author_block
     display: flex
     flex-direction: row
@@ -96,15 +88,10 @@ a, ul
     @include flex_display($jc: center)
     height: 158px
     width: 280px
+    border-radius: $main_border_radius
     overflow: hidden
-    background-color: #333
-    .bg_image
-        display: block
-        height: 100%
-        background-color: #333
-        color: #333
-        // width: 100%
-
+.bg_image
+    height: 100%
 
 %view_counter
     display: flex
