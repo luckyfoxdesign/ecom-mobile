@@ -15,23 +15,34 @@
     grid-template-rows: repeat(10, auto)
 
 .nav_links
-    display: flex
-    justify-content: center
-    &-wrapper
-        @include new_grid(auto, repeat(4, 280px), 24px)
+    box-shadow: 0 8px 16px -8px rgba($grey33, .15)
+    z-index: 2
     &-category
-        display: grid
-        grid-template-rows: 1fr
-        grid-template-columns: repeat(8, auto) 1fr
-        grid-column-start: 1
-        grid-column-end: 5
-
+        @include flex_display($jc:center)
+        &--wrapper
+            @include new_grid(auto, repeat(4, 280px), 24px)
+        &--categories
+            display: grid
+            grid-template-rows: 1fr
+            grid-template-columns: repeat(8, auto) 1fr
+            grid-column-start: 1
+            grid-column-end: 5
         &--item
             border-right: 1px solid $greyE6
+            @include flex_display($ai:center, $fd:row)
+            max-width: 190px
+            // &:nth-child(1)
+            //     >:nth-child(1)
+            //         padding-left: 0
+            &:hover
+                background-color: #333333
+                cursor: pointer
+                >*
+                    color: #fff
         &--name
-            padding: 12px
-            &:after
-                content: "\f0c4"
+            padding: 12px 8px 12px 12px
+            color: $grey75
+            @extend %ellips
 
 .top_sales
     @extend %flex_center
