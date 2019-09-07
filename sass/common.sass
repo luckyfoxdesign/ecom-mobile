@@ -11,6 +11,9 @@ h1,h2,h3,h4
 a, ul
     @extend %mp0
 
+button, input
+    border: none
+
 @mixin item_list($td, $hover_color, $link_color)
     @extend %mp0
     li
@@ -94,9 +97,13 @@ a, ul
     height: 100%
 
 .nav_menu_icon
-    margin-right: 12px
+    margin: 4px 16px 0 0
     font-size: 12px
     color: $grey75
+
+.nav_search_icon
+    font-size: 13px
+    margin: 4px 6px 0 0
 
 %view_counter
     display: flex

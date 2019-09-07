@@ -13,10 +13,51 @@
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: repeat(10, auto)
+    // position: relative
 
 .nav_links
     box-shadow: 0 8px 16px -8px rgba($grey33, .15)
     z-index: 2
+    &-search_bar
+        @include flex_display($jc:center)
+        background-color: $grey33
+        &--wrapper
+            @include new_grid(auto, repeat(4, 280px), 24px)
+            margin: 8px 0
+        &--wrapper_content
+            @include flex_display($jc:flex-start, $ai:center, $fd:row)
+            grid-column-start: 1
+            grid-column-end: 5
+        &--logo
+            @include flex_display($jc:center)
+        &--search
+            @include flex_display($jc:center)
+            margin: 0 32px
+        &--search_input
+            height: 40px
+            border-top-left-radius: $main_border_radius
+            border-bottom-left-radius: $main_border_radius
+            padding: 12px
+            width: 300px
+            &::placeholder
+                color: $greyCC
+        &--search_select
+            background-color: $greyCC
+            padding: 0 16px
+            display: flex
+            &:hover
+                background-color: $blue
+                cursor: pointer
+                color: $white
+                >*
+                    color: $white
+            .nav_button_select_icon
+                font-size: 12px
+                margin: 4px 0 0 8px
+        &--search_button
+            padding: 0 16px
+            @include flex_display($ai:center)
+
     &-category
         @include flex_display($jc:center)
         &--wrapper
@@ -30,7 +71,7 @@
         &--item
             border-right: 1px solid $greyE6
             @include flex_display($ai:center, $fd:row)
-            max-width: 190px
+            max-width: 171px
             // &:nth-child(1)
             //     >:nth-child(1)
             //         padding-left: 0
@@ -40,7 +81,7 @@
                 >*
                     color: #fff
         &--name
-            padding: 12px 8px 12px 12px
+            padding: 12px 8px 12px 16px
             color: $grey75
             @extend %ellips
 
