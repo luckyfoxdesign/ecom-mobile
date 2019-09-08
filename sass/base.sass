@@ -23,7 +23,7 @@
         background-color: $grey33
         &--wrapper
             @include new_grid(auto, repeat(4, 280px), 24px)
-            margin: 8px 0
+            margin: 24px 0
         &--wrapper_content
             @include flex_display($jc:flex-start, $ai:center, $fd:row)
             grid-column-start: 1
@@ -44,7 +44,8 @@
         &--search_select
             background-color: $greyCC
             padding: 0 16px
-            display: flex
+            @include flex_display($ai:center)
+            height: 40px
             &:hover
                 background-color: $blue
                 cursor: pointer
@@ -57,6 +58,21 @@
         &--search_button
             padding: 0 16px
             @include flex_display($ai:center)
+            border-top-right-radius: $main_border_radius
+            border-bottom-right-radius: $main_border_radius
+            &:hover
+                background-color: $blue
+                cursor: pointer
+                color: $white
+                >
+                    color: $white
+        &--link_deffered
+            margin-right: 16px
+        &--enter_button
+            height: 40px
+            padding: 0 16px
+            margin-left: auto
+            border-radius: $main_border_radius
 
     &-category
         @include flex_display($jc:center)
@@ -170,7 +186,7 @@
         &--img
             position: relative
             width: 100%
-            height: 232px
+            height: 200px
             margin-bottom: 24px
             @extend %image_center
         &--like_icon
