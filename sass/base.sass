@@ -7,13 +7,11 @@
 .content
     width: 100vw
     height: 100vh
-    overflow-y: scroll
 
 .wrapper
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: repeat(10, auto)
-    // position: relative
 
 .nav_links
     box-shadow: 0 8px 16px -8px rgba($grey33, .15)
@@ -26,8 +24,7 @@
             margin: 24px 0
         &--wrapper_content
             @include flex_display($jc:flex-start, $ai:center, $fd:row)
-            grid-column-start: 1
-            grid-column-end: 5
+            @include column_start(1, 5)
         &--logo
             @include flex_display($jc:center)
         &--search
@@ -73,6 +70,9 @@
             padding: 0 16px
             margin-left: auto
             border-radius: $main_border_radius
+            &:hover
+                background-color: $blue
+                cursor: pointer
 
     &-category
         @include flex_display($jc:center)
@@ -82,8 +82,7 @@
             display: grid
             grid-template-rows: 1fr
             grid-template-columns: repeat(8, auto) 1fr
-            grid-column-start: 1
-            grid-column-end: 5
+            @include column_start(1, 5)
         &--item
             border-right: 1px solid $greyE6
             @include flex_display($ai:center, $fd:row)
@@ -108,8 +107,7 @@
         margin-top: 32px
         @include new_grid(auto, repeat(4, 280px), 24px)
     &-new_phone
-        grid-column-start: 1
-        grid-column-end: 4
+        @include column_start(1, 4)
         background-color: $blue
         padding: 32px
         border-radius: $main_border_radius
@@ -124,7 +122,7 @@
             margin-bottom: 8px
         &--sum_total
             height: 40px
-            margin-bottom: 40px
+            margin-bottom: 72px
             background-color: rgba(29, 255, 233, 0.15)
             border-radius: 2px
             position: relative
@@ -134,12 +132,29 @@
             border: 2px solid $white
             border-radius: 3px
             @include pos_abs($t:-2px, $l:0)
-        &--mark
-            width: 24px
+        &--progress_mark
+            @include pos_abs($r:-29px, $t:8px)
+            text-align: center
+        &--progress_button
             height: 24px
-            background-color: $white
+            width: 24px
             border-radius: 50%
-            @include pos_abs($r:-12px, $b:7px)
+            margin-bottom: 16px
+        &--float_price
+            @include flex_display($jc:center, $fd:column)
+        &--vertical_block
+            @include flex_display($jc:center, $ai:column)
+            .vertical
+                width: 4px
+                height: 16px
+                background-color: $dark_blue
+                border-top-left-radius: 4px
+                border-top-right-radius: 4px
+        &--horizontal_block
+            padding: 6px
+            background-color: $dark_blue
+            border-radius: $main_border_radius
+            color: $white
 
     &-items
         background-color: $white
@@ -254,13 +269,6 @@
             margin-left: auto
             @extend %view_counter
 
-.see_around
-    background-color: $orange
-
-.see_all
-    background-color: $violet
-
-
 .phone_by_char
     @extend %flex_center
     background-color: $bg_blue
@@ -287,18 +295,22 @@
     @extend %flex_center
     background-color: $bg_blue
     &-wrapper
-        margin: 64px 0 24px 0
+        margin: 64px 0
     &-header
         margin-bottom: 24px
     &-items
-        @include new_grid(repeat(2, 1fr), repeat(4, 280px), 24px)
+        @include new_grid(auto, repeat(4, 280px), 24px)
         &--brand_img
             position: relative
             width: 100%
             height: 200px
-            margin-bottom: 24px
             background-color: $white
             @extend %image_center
+        &_wrapper
+            @include new_grid(repeat(2, 1fr), repeat(5, 1fr), 16px)
+            grid-row-gap: 16px
+            grid-column-start: 1
+            grid-column-end: 5
 
 .feedback
     @extend %flex_center
@@ -361,5 +373,28 @@
             @include column_start(1, 5)
 
 .footer_links
+    @include flex_display($jc:center)
+    background-color: $grey33
+    &-wrapper
+        @include new_grid(auto, repeat(4, 280px), 24px)
+        margin: $header_bottom_margin 0
+        &--wrapper_content
+            @include column_start(1, 5)
+    &-link_list
+        @include new_grid(auto, repeat(5, auto), 24px)
+        margin-bottom: 32px
+        li
+            // display: inline-block
+            list-style: none
+            a
+                text-decoration: none
+                color: $blue
+                &:hover
+                    color: $blue
+                    cursor: pointer
+        &--item_header
+            color: $white
+            margin-bottom: 8px
+
     &-item_list
         @include item_list(none, $grey33, $blue)

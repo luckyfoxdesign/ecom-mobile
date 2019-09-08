@@ -96,9 +96,9 @@ button, input {
 
 .compare_link_icon {
   margin-right: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -115,6 +115,12 @@ button, input {
   .compare_links:hover {
     color: #4141BE; }
 
+.overview {
+  background-color: #FFA300; }
+
+.compilation {
+  background-color: #673AB7; }
+
 .article-items--view_counter, .interesting_videos-items--view_counter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,8 +134,7 @@ button, input {
 
 .content {
   width: 100vw;
-  height: 100vh;
-  overflow-y: scroll; }
+  height: 100vh; }
 
 .wrapper {
   display: -ms-grid;
@@ -249,6 +254,9 @@ button, input {
       padding: 0 16px;
       margin-left: auto;
       border-radius: 4px; }
+      .nav_links-search_bar--enter_button:hover {
+        background-color: #4141BE;
+        cursor: pointer; }
   .nav_links-category {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -326,7 +334,7 @@ button, input {
       margin-bottom: 8px; }
     .top_sales-new_phone--sum_total {
       height: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 72px;
       background-color: rgba(29, 255, 233, 0.15);
       border-radius: 2px;
       position: relative; }
@@ -338,14 +346,48 @@ button, input {
       position: absolute;
       top: -2px;
       left: 0; }
-    .top_sales-new_phone--mark {
-      width: 24px;
-      height: 24px;
-      background-color: #ffffff;
-      border-radius: 50%;
+    .top_sales-new_phone--progress_mark {
       position: absolute;
-      right: -12px;
-      bottom: 7px; }
+      top: 8px;
+      right: -29px;
+      text-align: center; }
+    .top_sales-new_phone--progress_button {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      margin-bottom: 16px; }
+    .top_sales-new_phone--float_price {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+    .top_sales-new_phone--vertical_block {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: column;
+      -ms-flex-align: column;
+      align-items: column; }
+      .top_sales-new_phone--vertical_block .vertical {
+        width: 4px;
+        height: 16px;
+        background-color: #1C196F;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px; }
+    .top_sales-new_phone--horizontal_block {
+      padding: 6px;
+      background-color: #1C196F;
+      border-radius: 4px;
+      color: #ffffff; }
   .top_sales-items {
     background-color: #ffffff;
     padding: 24px;
@@ -560,12 +602,6 @@ button, input {
   .article-items--view_counter {
     margin-left: auto; }
 
-.see_around {
-  background-color: #FFA300; }
-
-.see_all {
-  background-color: #673AB7; }
-
 .phone_by_char {
   background-color: #F5F6F9; }
   .phone_by_char-wrapper {
@@ -602,14 +638,14 @@ button, input {
 .best_brands {
   background-color: #F5F6F9; }
   .best_brands-wrapper {
-    margin: 64px 0 24px 0; }
+    margin: 64px 0; }
   .best_brands-header {
     margin-bottom: 24px; }
   .best_brands-items {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (1fr)[2];
-    grid-template-rows: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
     -ms-grid-columns: (280px)[4];
     grid-template-columns: repeat(4, 280px);
     grid-column-gap: 24px; }
@@ -617,8 +653,20 @@ button, input {
       position: relative;
       width: 100%;
       height: 200px;
-      margin-bottom: 24px;
       background-color: #ffffff; }
+    .best_brands-items_wrapper {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+      -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      -ms-grid-column: 1;
+      grid-column-start: 1;
+      -ms-grid-column-span: 4;
+      grid-column-end: 5; }
 
 .feedback-wrapper {
   margin-bottom: 64px; }
@@ -715,13 +763,55 @@ button, input {
       -ms-grid-column-span: 4;
       grid-column-end: 5; }
 
-.footer_links-item_list li {
-  display: inline-block; }
-  .footer_links-item_list li:not(:first-child) {
-    margin-left: 16px; }
-  .footer_links-item_list li a {
-    text-decoration: none;
-    color: #4141BE; }
-    .footer_links-item_list li a:hover {
-      color: #333333;
-      cursor: pointer; }
+.footer_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #333333; }
+  .footer_links-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    -ms-grid-columns: (280px)[4];
+    grid-template-columns: repeat(4, 280px);
+    grid-column-gap: 24px;
+    margin: 64px 0; }
+    .footer_links-wrapper--wrapper_content {
+      -ms-grid-column: 1;
+      grid-column-start: 1;
+      -ms-grid-column-span: 4;
+      grid-column-end: 5; }
+  .footer_links-link_list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    -ms-grid-columns: (auto)[5];
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 24px;
+    margin-bottom: 32px; }
+    .footer_links-link_list li {
+      list-style: none; }
+      .footer_links-link_list li a {
+        text-decoration: none;
+        color: #4141BE; }
+        .footer_links-link_list li a:hover {
+          color: #4141BE;
+          cursor: pointer; }
+    .footer_links-link_list--item_header {
+      color: #ffffff;
+      margin-bottom: 8px; }
+  .footer_links-item_list li {
+    display: inline-block; }
+    .footer_links-item_list li:not(:first-child) {
+      margin-left: 16px; }
+    .footer_links-item_list li a {
+      text-decoration: none;
+      color: #4141BE; }
+      .footer_links-item_list li a:hover {
+        color: #333333;
+        cursor: pointer; }
