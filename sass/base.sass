@@ -35,7 +35,7 @@
             border-top-left-radius: $main_border_radius
             border-bottom-left-radius: $main_border_radius
             padding: 12px
-            width: 300px
+            width: 460px
             &::placeholder
                 color: $greyCC
         &--search_select
@@ -73,23 +73,21 @@
             &:hover
                 background-color: $blue
                 cursor: pointer
-
     &-category
         @include flex_display($jc:center)
         &--wrapper
             @include new_grid(auto, repeat(4, 280px), 24px)
         &--categories
             display: grid
-            grid-template-rows: 1fr
-            grid-template-columns: repeat(8, auto) 1fr
-            @include column_start(1, 5)
+            grid-column: 1 / 5
+            grid-auto-flow: column
         &--item
-            border-right: 1px solid $greyE6
             @include flex_display($ai:center, $fd:row)
-            max-width: 171px
-            // &:nth-child(1)
-            //     >:nth-child(1)
-            //         padding-left: 0
+            border-right: 1px solid $greyCC
+            &:nth-child(1)
+                border-left: 1px solid $greyCC
+            &:focus
+                z-index: 12
             &:hover
                 background-color: #333333
                 cursor: pointer
@@ -151,7 +149,7 @@
                 border-top-left-radius: 4px
                 border-top-right-radius: 4px
         &--horizontal_block
-            padding: 6px
+            padding: 6px 6px 4px 6px
             background-color: $dark_blue
             border-radius: $main_border_radius
             color: $white

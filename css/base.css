@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal; }
 
-h1, h2, h3, h4, a, ul, .top_sales-item_list, .hot_news-item_list, .article-item_list, .interesting_videos-item_list, .footer_links-item_list {
+h1, h2, h3, h4, a, ul, button, .top_sales-item_list, .hot_news-item_list, .article-item_list, .interesting_videos-item_list, .footer_links-item_list {
   margin: 0;
   padding: 0; }
 
@@ -203,7 +203,7 @@ button, input {
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
       padding: 12px;
-      width: 300px; }
+      width: 460px; }
       .nav_links-search_bar--search_input::-webkit-input-placeholder {
         color: #cccccc; }
       .nav_links-search_bar--search_input:-ms-input-placeholder {
@@ -275,16 +275,11 @@ button, input {
     .nav_links-category--categories {
       display: -ms-grid;
       display: grid;
-      -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      -ms-grid-columns: (auto)[8] 1fr;
-      grid-template-columns: repeat(8, auto) 1fr;
       -ms-grid-column: 1;
-      grid-column-start: 1;
       -ms-grid-column-span: 4;
-      grid-column-end: 5; }
+      grid-column: 1 / 5;
+      grid-auto-flow: column; }
     .nav_links-category--item {
-      border-right: 1px solid #e6e6e6;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -295,7 +290,11 @@ button, input {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      max-width: 171px; }
+      border-right: 1px solid #cccccc; }
+      .nav_links-category--item:nth-child(1) {
+        border-left: 1px solid #cccccc; }
+      .nav_links-category--item:focus {
+        z-index: 12; }
       .nav_links-category--item:hover {
         background-color: #333333;
         cursor: pointer; }
@@ -384,7 +383,7 @@ button, input {
         border-top-left-radius: 4px;
         border-top-right-radius: 4px; }
     .top_sales-new_phone--horizontal_block {
-      padding: 6px;
+      padding: 6px 6px 4px 6px;
       background-color: #1C196F;
       border-radius: 4px;
       color: #ffffff; }
