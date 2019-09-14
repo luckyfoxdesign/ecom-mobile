@@ -24,7 +24,7 @@
             margin: 24px 0
         &--wrapper_content
             @include flex_display($jc:flex-start, $ai:center, $fd:row)
-            @include column_start(1, 5)
+            grid-column: 1 /5 
         &--logo
             @include flex_display($jc:center)
         &--search
@@ -35,7 +35,7 @@
             border-top-left-radius: $main_border_radius
             border-bottom-left-radius: $main_border_radius
             padding: 12px
-            width: 460px
+            width: 400px
             &::placeholder
                 color: $greyCC
         &--search_select
@@ -84,6 +84,7 @@
         &--item
             @include flex_display($ai:center, $fd:row)
             border-right: 1px solid $greyCC
+            background-color: #fff
             &:nth-child(1)
                 border-left: 1px solid $greyCC
             &:focus
@@ -99,13 +100,13 @@
             @extend %ellips
 
 .top_sales
-    @extend %flex_center
+    @include flex_display($jc:center)
     background-color: $bg_blue
     &-wrapper
         margin-top: 32px
         @include new_grid(auto, repeat(4, 280px), 24px)
     &-new_phone
-        @include column_start(1, 4)
+        grid-column: 1 / 4
         background-color: $blue
         padding: 32px
         border-radius: $main_border_radius
@@ -159,28 +160,45 @@
         padding: 24px
         border-radius: $main_border_radius
         &--list
-            margin: 8px 0 24px 0
+            margin: 12px 0 24px 0
         &--item
             @include flex_display($jc:center, $fd:row, $ai:center)
             height: 40px
             border-bottom: 1px solid $greyE6
+        &--name_link, &--price_link
+            font-size: .9em
+            text-decoration: none
+        &--name_link
+            color: $grey33
+            &:hover
+                color: $grey00
+        &--price_link
+            &:hover
+                color: $linkHover
         &--item_name
             margin: 0 8px
             color: $grey33
             @extend %ellips
         &--item_price
             margin-left: auto
-            color: $blue_link
+            color: $link
     &-view_more_link
         width: 100%
         text-align: center
-        color: $grey75
+        font-size: .9em
+        &--link
+            text-decoration: none
+            color: $greyCC
+            &:hover
+                cursor: pointer
+                color: $grey75
+
     &-item_list
         @include item_list(underline, $white, $white)
 
 .hot_news
     background-color: $bg_blue
-    @extend %flex_center
+    @include flex_display($jc: center)
     &-wrapper
         margin: 32px 24px 40px 24px
     &-items
@@ -223,6 +241,14 @@
             margin-right: 8px
         &--feedback
             margin-left: auto
+            font-size: .9em
+            font-family: $GL
+            &_link
+                text-decoration: none
+                color: $orange
+                &:hover
+                    color: $darkOrange
+                    //text-decoration: underline
         &--features
             margin-top: 16px
         &--feature
@@ -234,15 +260,15 @@
             margin-right: 8px
     &-item_list
         margin: $itemList_bottom_margin
-        @include item_list(none, $grey33, $blue)
+        @include item_list()
 
 .article
-    @extend %flex_center
+    @include flex_display($jc: center)
     &-wrapper
         margin: $header_bottom_margin 0
     &-item_list
         margin: $itemList_bottom_margin
-        @include item_list(none, $grey33, $blue)
+        @include item_list()
     &-items
         @include new_grid(auto, repeat(4, 280px), 24px)
         &--article_author
@@ -261,23 +287,29 @@
             padding: 4px 8px
             border-radius: 0 3px 0 3px
             color: $white
+        &--article_header
+            font-size: 1.2em
+            line-height: 1.3em
         &--article_description
             margin: $paragraph_margin
+            font-size: 1em
+            line-height: 1.5em
+            font-family: $GR
         &--view_counter
             margin-left: auto
             @extend %view_counter
 
 .phone_by_char
-    @extend %flex_center
+    @include flex_display($jc: center)
     background-color: $bg_blue
     &-wrapper
         margin-top: 64px
         @include new_grid(repeat(2, auto), repeat(4, 280px), 24px)
     &-header
-        @include column_start(1, 5)
+        grid-column: 1 /5
         margin-bottom: 24px
     &-item_list
-        @include column_start(1, 5)
+        grid-column: 1 /5
         li
             display: inline-block
             margin-bottom: 12px
@@ -290,7 +322,7 @@
                     text-decoration: underline
 
 .best_brands
-    @extend %flex_center
+    @include flex_display($jc: center)
     background-color: $bg_blue
     &-wrapper
         margin: 64px 0
@@ -311,14 +343,14 @@
             grid-column-end: 5
 
 .feedback
-    @extend %flex_center
+    @include flex_display($jc: center)
     &-wrapper
         margin-bottom: $header_bottom_margin
     &-items
         @include new_grid(auto, repeat(4, 280px), 24px)
 
 .interesting_videos
-    @extend %flex_center
+    @include flex_display($jc: center)
     &-wrapper
         margin: $header_bottom_margin 0
     &-items
@@ -350,6 +382,8 @@
             z-index: 2
         &--description
             margin: $paragraph_margin
+            line-height: 1.5em
+            font-size: 1em
         &--counter
             color: $white
         &--image_overlay
@@ -359,16 +393,16 @@
             background-color: rgba($grey33, .3)
     &-item_list
         margin: $itemList_bottom_margin
-        @include item_list(none, $grey33, $blue)
+        @include item_list()
 
 .how_to_use
-    @extend %flex_center
+    @include flex_display($jc: center)
     background-color: $bg_blue
     &-wrapper
         @include new_grid(repeat(3, auto), repeat(4, 280px), 24px)
         margin: $header_bottom_margin 0
-        h, p
-            @include column_start(1, 5)
+        &--content
+            grid-column: 1 / 5
 
 .footer_links
     @include flex_display($jc:center)
@@ -377,7 +411,7 @@
         @include new_grid(auto, repeat(4, 280px), 24px)
         margin: $header_bottom_margin 0
         &--wrapper_content
-            @include column_start(1, 5)
+            grid-column: 1 / 5
     &-link_list
         @include new_grid(auto, repeat(5, auto), 24px)
         margin-bottom: 32px

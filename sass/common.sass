@@ -4,27 +4,42 @@
 
 h1,h2,h3,h4
     @extend %mp0
-    font-family: 'SSP_Black'
-    font-weight: 600
+    font-family: $GM
+    color: $grey33
+
+p
+    font-family: $GR
     color: $grey33
 
 a, ul, button
     @extend %mp0
 
+a
+    font-family: $GR
+
 button, input
     border: none
 
-@mixin item_list($td, $hover_color, $link_color)
+@mixin item_list($td:null, $hc:null, $lc:null)
     @extend %mp0
     li
         display: inline-block
         &:not(:first-child)
             margin-left: 16px
         a
-            text-decoration: $td
-            color: $link_color
+            @if $td==null
+                text-decoration: none
+            @else
+                text-decoration: $td
+            @if $lc==null
+                color: $blue
+            @else
+                color: $lc
             &:hover
-                color: $hover_color
+                @if $hc==null
+                    color: $dark_blue
+                @else
+                    color: $hc
                 cursor: pointer
 
 %image_center
@@ -64,10 +79,6 @@ button, input
     grid-template-columns: $column
     grid-column-gap: $gap_column
 
-@mixin column_start($start, $end)
-    grid-column-start: $start
-    grid-column-end: $end
-
 .author_block
     display: flex
     flex-direction: row
@@ -85,7 +96,10 @@ button, input
             height: 100%
             text-align: center
     .author_name
-        color: $blue
+        font-family: $GL
+        font-size: .95em
+        font-weight: 300
+        color: $grey75
 
 .image_block
     @include flex_display($jc: center)
@@ -96,10 +110,16 @@ button, input
 .bg_image
     height: 100%
 
+// .block_header
+//     font-family: 'GLight', sans-serif
+
 .nav_menu_icon
-    margin: 4px 16px 0 0
+    margin: 2px 16px 0 0
     font-size: 12px
     color: $grey75
+
+.font_icon
+    @include flex_display($jc: center, $ai:center)
 
 .nav_search_icon
     font-size: 13px
@@ -119,9 +139,13 @@ button, input
         color: $blue
 
 .overview
+    font-size: 1em
+    font-family: $GR
     background-color: $orange
 
 .compilation
+    font-size: 1em
+    font-family: $GR
     background-color: $violet
 
 %view_counter
@@ -129,3 +153,7 @@ button, input
     flex-direction: row
     .counter
         margin-left: 4px
+        color: $grey75
+        font-family: $GL
+        font-weight: 300
+        font-size: .9em
