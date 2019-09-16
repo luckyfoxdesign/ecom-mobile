@@ -2,13 +2,16 @@
     margin: 0
     padding: 0
 
+// body
+//     font-family: 'GF', sans-serif
+
 h1,h2,h3,h4
     @extend %mp0
-    font-family: $GM
+    font-family: $GF
     color: $grey33
 
 p
-    font-family: $GR
+    font-family: $GF
     color: $grey33
 
 a, ul, button
@@ -16,6 +19,8 @@ a, ul, button
 
 a
     font-family: $GR
+    &:hover
+        cursor: pointer
 
 button, input
     border: none
@@ -31,6 +36,8 @@ button, input
                 text-decoration: none
             @else
                 text-decoration: $td
+                &:hover
+                    text-decoration: none
             @if $lc==null
                 color: $blue
             @else
@@ -79,6 +86,13 @@ button, input
     grid-template-columns: $column
     grid-column-gap: $gap_column
 
+@mixin pom($l)
+    overflow: hidden
+    -webkit-line-clamp: $l
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+    display: -webkit-box
+
 .author_block
     display: flex
     flex-direction: row
@@ -109,9 +123,6 @@ button, input
     overflow: hidden
 .bg_image
     height: 100%
-
-// .block_header
-//     font-family: 'GLight', sans-serif
 
 .nav_menu_icon
     margin: 2px 16px 0 0
@@ -148,9 +159,13 @@ button, input
     font-family: $GR
     background-color: $violet
 
+.raiting_stars
+    @include flex_display($ai:center)
+
 %view_counter
     display: flex
     flex-direction: row
+    align-items: center
     .counter
         margin-left: 4px
         color: $grey75

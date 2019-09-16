@@ -154,6 +154,8 @@
             background-color: $dark_blue
             border-radius: $main_border_radius
             color: $white
+            font-family: $GF
+            // font-size: .9em
 
     &-items
         background-color: $white
@@ -233,12 +235,19 @@
         &--text_counter
             padding: 6px 0
             width: 40px
-            background-color: #333333
+            background-color: $grey33
             border-radius: 16px
             color: $white
+            font-family: $GL
+            text-decoration: none
             font-size: .8em
             text-align: center
             margin-right: 8px
+        &--description
+            font-family: $GL
+            //font-weight: 300
+            font-size: .9em
+            color: $grey75
         &--feedback
             margin-left: auto
             font-size: .9em
@@ -255,6 +264,10 @@
             @include flex_display($fd: row, $ai: center)
             &:not(:first-child)
                 margin-top: 8px
+            font-family: $GL
+            font-weight: 300
+            color: $grey75  
+            font-size: .9em
         &--feature_icon
             @include flex_display($ai: center)
             margin-right: 8px
@@ -344,10 +357,47 @@
 
 .feedback
     @include flex_display($jc: center)
+    background-color: $bg_blue
     &-wrapper
-        margin-bottom: $header_bottom_margin
-    &-items
+        margin-top: $header_bottom_margin
         @include new_grid(auto, repeat(4, 280px), 24px)
+        &--wrapper_content
+            grid-column: 1 / 5
+        &--content_title
+            @include flex_display($ai: center)
+            margin-bottom: 32px
+        &--show_more
+            margin-left: auto
+        &--image_wrapper
+            position: relative
+            height: 122px
+            margin-bottom: 8px
+            @extend %image_center
+    &-items
+        @include new_grid(auto, repeat(6, 182px), 20px)
+        &--item_header
+            @extend %ellips
+            //max-width: 261px
+        &--feedback_item
+            @include flex_display($ai: flex-start, $fd:row)
+            padding: 24px 16px
+            background-color: $white
+            &:nth-child(1)
+                grid-column: 1 / 3
+            &:nth-child(2)
+                grid-column: 3 / 5
+            &:nth-child(3)
+                grid-column: 5 / 7
+        &--about
+            margin-left: 16px
+            max-width: 261px
+        &--description
+            display: block
+            line-height: 1.5em
+            font-size: 1em
+            height: 120px
+            @include pom(5)
+            margin: $paragraph_margin
 
 .interesting_videos
     @include flex_display($jc: center)
@@ -412,6 +462,8 @@
         margin: $header_bottom_margin 0
         &--wrapper_content
             grid-column: 1 / 5
+    &-copyright_block
+        
     &-link_list
         @include new_grid(auto, repeat(5, auto), 24px)
         margin-bottom: 32px
@@ -429,4 +481,4 @@
             margin-bottom: 8px
 
     &-item_list
-        @include item_list(none, $grey33, $blue)
+        @include item_list($lc:$white)
