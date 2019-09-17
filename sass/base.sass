@@ -212,10 +212,11 @@
         background-color: $white
         border-radius: $main_border_radius
         position: relative
-        &--header
+        &--header_block
             margin-bottom: 16px
-            h2
-                margin-bottom: 4px
+        &--item_header
+            margin-bottom: 4px
+            @extend %ellips
         &--img
             position: relative
             width: 100%
@@ -301,13 +302,11 @@
             border-radius: 0 3px 0 3px
             color: $white
         &--article_header
-            font-size: 1.2em
-            line-height: 1.3em
+            @include pom(2)
         &--article_description
             margin: $paragraph_margin
-            font-size: 1em
-            line-height: 1.5em
-            font-family: $GR
+            height: 48px
+            @include pom(2)
         &--view_counter
             margin-left: auto
             @extend %view_counter
@@ -393,8 +392,6 @@
             max-width: 261px
         &--description
             display: block
-            line-height: 1.5em
-            font-size: 1em
             height: 120px
             @include pom(5)
             margin: $paragraph_margin
@@ -432,8 +429,7 @@
             z-index: 2
         &--description
             margin: $paragraph_margin
-            line-height: 1.5em
-            font-size: 1em
+            @include pom(3)
         &--counter
             color: $white
         &--image_overlay
