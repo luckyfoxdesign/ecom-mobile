@@ -44,7 +44,8 @@ a {
     cursor: pointer; }
 
 button, input {
-  border: none; }
+  border: none;
+  font-family: "GF", sans-serif; }
 
 .hot_news-item--img img, .best_brands-items--brand_img img, .feedback-wrapper--image_wrapper img {
   position: absolute;
@@ -329,9 +330,6 @@ button, input {
     .nav_links-category--categories {
       display: -ms-grid;
       display: grid;
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 4;
-      grid-column: 1 / 5;
       grid-auto-flow: column; }
     .nav_links-category--item {
       display: -webkit-box;
