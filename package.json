@@ -1,0 +1,31 @@
+{
+  "name": "ecom-mobile",
+  "version": "0.0.1",
+  "description": "ecom mobile dev package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luckyfoxdesign/ecom-mobile.git"
+  },
+  "author": "Lucky Fox Design",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luckyfoxdesign/ecom-mobile/issues"
+  },
+  "homepage": "https://github.com/Luckyfoxdesign/ecom-mobile#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "luxon": "^1.17.3",
+    "popper.js": "^1.15.0"
+  }
+}
