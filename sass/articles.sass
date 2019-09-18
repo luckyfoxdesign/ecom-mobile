@@ -1,0 +1,40 @@
+.article
+    @include flex_display($jc: center)
+    &-wrapper
+        margin: $header_bottom_margin 0
+    &-item_list
+        margin: $itemList_bottom_margin
+        @include item_list()
+    &-items
+        @include new_grid(auto, repeat(4, 280px), 24px)
+        &--article_author
+            @include flex_display($fd: row, $ai: center)
+        &--article_image
+            position: relative
+            height: 160px
+            width: 100%
+            margin-bottom: 16px
+        &--image
+            width: 100%
+            height: 100%
+            border-radius: $main_border_radius
+        &--image_title
+            @include pos_abs($l:0, $b:0)
+            padding: 4px 8px
+            border-radius: 0 3px 0 3px
+            color: $white
+        &--article_header
+            @include pom(2)
+            &_link
+                color: $grey33
+                &:hover
+                    color: $grey00
+        &--article_description
+            margin: $paragraph_margin
+            height: 48px
+            @include pom(2)
+            &_link
+                color: $grey33
+        &--view_counter
+            margin-left: auto
+            @extend %view_counter

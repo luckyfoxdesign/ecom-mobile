@@ -90,11 +90,11 @@
 /*!*********************!*\
   !*** ./js/index.js ***!
   \*********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _luxon = __webpack_require__(/*! luxon */ \"./node_modules/luxon/build/cjs-browser/luxon.js\");\n\nvar x = _luxon.DateTime.local();\n\nconsole.log('wwdwdwd + : ${x}');\n\n//# sourceURL=webpack:///./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var luxon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! luxon */ \"./node_modules/luxon/build/cjs-browser/luxon.js\");\n/* harmony import */ var luxon__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(luxon__WEBPACK_IMPORTED_MODULE_0__);\n\nvar x = luxon__WEBPACK_IMPORTED_MODULE_0__[\"DateTime\"].local();\nconsole.log('wwdwdwd + : ${x}');\nconsole.log('wdwd');\n\n//# sourceURL=webpack:///./js/index.js?");
 
 /***/ }),
 

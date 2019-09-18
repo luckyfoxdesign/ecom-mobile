@@ -3,6 +3,7 @@
 @import "components"
 @import "common"
 @import "media"
+@import "articles"
 
 .content
     width: 100vw
@@ -12,10 +13,13 @@
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: repeat(10, auto)
+    position: relative
 
 .nav_links
     box-shadow: 0 8px 16px -8px rgba($grey33, .15)
-    z-index: 2
+    position: sticky
+    top: 0
+    z-index: 12
     &-search_bar
         @include flex_display($jc:center)
         background-color: $grey33
@@ -75,6 +79,7 @@
                 cursor: pointer
     &-category
         @include flex_display($jc:center)
+        background-color: $white
         &--wrapper
             @include new_grid(auto, repeat(4, 280px), 24px)
         &--categories
@@ -217,6 +222,10 @@
         &--item_header
             margin-bottom: 4px
             @extend %ellips
+            &_link
+                color: $grey33
+                &:hover
+                    color: $grey00
         &--img
             position: relative
             width: 100%
@@ -225,7 +234,7 @@
             @extend %image_center
         &--like_icon
             @include pos_abs($t: 0, $r: 0)
-            z-index: 22
+            z-index: 10
             width: 60px
             height: 60px
             @include flex_display($jc: center, $ai: center)
@@ -267,7 +276,7 @@
                 margin-top: 8px
             font-family: $GL
             font-weight: 300
-            color: $grey75  
+            color: $grey75
             font-size: .9em
         &--feature_icon
             @include flex_display($ai: center)
@@ -275,41 +284,6 @@
     &-item_list
         margin: $itemList_bottom_margin
         @include item_list()
-
-.article
-    @include flex_display($jc: center)
-    &-wrapper
-        margin: $header_bottom_margin 0
-    &-item_list
-        margin: $itemList_bottom_margin
-        @include item_list()
-    &-items
-        @include new_grid(auto, repeat(4, 280px), 24px)
-        &--article_author
-            @include flex_display($fd: row, $ai: center)
-        &--article_image
-            position: relative
-            height: 160px
-            width: 100%
-            margin-bottom: 16px
-        &--image
-            width: 100%
-            height: 100%
-            border-radius: $main_border_radius
-        &--image_title
-            @include pos_abs($l:0, $b:0)
-            padding: 4px 8px
-            border-radius: 0 3px 0 3px
-            color: $white
-        &--article_header
-            @include pom(2)
-        &--article_description
-            margin: $paragraph_margin
-            height: 48px
-            @include pom(2)
-        &--view_counter
-            margin-left: auto
-            @extend %view_counter
 
 .phone_by_char
     @include flex_display($jc: center)
@@ -377,6 +351,8 @@
         &--item_header
             @extend %ellips
             //max-width: 261px
+            &_link
+                color: $grey33
         &--feedback_item
             @include flex_display($ai: flex-start, $fd:row)
             padding: 24px 16px
@@ -395,6 +371,8 @@
             height: 120px
             @include pom(5)
             margin: $paragraph_margin
+            &_link
+                color: $grey33
 
 .interesting_videos
     @include flex_display($jc: center)

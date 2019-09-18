@@ -5,7 +5,7 @@
 // body
 //     font-family: 'GF', sans-serif
 
-h1,h2,h3,h4
+h1,h2,h3,h4,ul, button
     @extend %mp0
     font-family: $GF
     color: $grey33
@@ -24,11 +24,10 @@ p
     line-height: 1.5em
     font-size: 1em
 
-a, ul, button
-    @extend %mp0
-
 a
+    @extend %mp0
     font-family: $GR
+    text-decoration: none
     &:hover
         cursor: pointer
 
