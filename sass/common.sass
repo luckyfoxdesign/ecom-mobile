@@ -35,13 +35,20 @@ button, input
     border: none
     font-family: $GF
 
-@mixin item_list($td:null, $hc:null, $lc:null)
+@mixin item_list($td:null, $hc:null, $lc:null, $mb:null, $pr:null, $wc:null, $ml:null)
     @extend %mp0
     li
         display: inline-block
+        margin-bottom: $mb
+        &:not(:last-child)
+            padding-right: $pr
         &:not(:first-child)
-            margin-left: 16px
+            @if $ml == null
+                margin-left: 16px
+            @else
+                margin-left: $ml
         a
+            white-space: $wc
             @if $td==null
                 text-decoration: none
             @else
@@ -133,6 +140,7 @@ button, input
     overflow: hidden
 .bg_image
     height: 100%
+    transition: transform .6s
 
 .nav_menu_icon
     margin: 2px 16px 0 0
