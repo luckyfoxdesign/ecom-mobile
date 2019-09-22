@@ -1,0 +1,39 @@
+.footer_links
+    @include flex_display($jc:center)
+    background-color: $grey33
+    &-wrapper
+        @include new_grid(auto, repeat(4, 280px), 24px)
+        margin: $header_bottom_margin 0
+        &--wrapper_content
+            grid-column: 1 / 5
+    &-copyright_block
+        @include flex_display($ai:center, $fd:row)
+    &-link_list
+        @include new_grid(auto, repeat(5, auto), 24px)
+        @include item_list($ls:none, $lc:$white, $hc:$orange, $d:block, $ml:0, $mb:8px)
+        margin-bottom: 32px
+        &--item_header
+            color: $white
+            margin-bottom: 16px
+        &--social_links
+            @include flex_display($fd:column, $ai:flex-start)
+            >:not(:last-child)
+                margin-bottom: 12px
+    &-copyright
+        font-family: $GF
+        color: $grey75
+        font-size: .9em
+
+    &-item_list
+        @include item_list($lc:$white, $ml:0, $hc:$orange)
+        margin-left: auto
+        font-size: .9em
+        &--link_heart
+            margin-right: 8px
+            vertical-align: middle
+        li
+            &:not(:last-child)
+                padding-right: 24px
+                border-right: 1px solid $grey75
+            &:not(:first-child)
+                padding-left: 24px

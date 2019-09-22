@@ -1,0 +1,88 @@
+.nav_links
+    box-shadow: 0 8px 16px -8px rgba($grey33, .15)
+    position: sticky
+    top: 0
+    z-index: 12
+    &-search_bar
+        @include flex_display($jc:center)
+        background-color: $grey33
+        &--wrapper
+            @include new_grid(auto, repeat(4, 280px), 24px)
+            margin: 24px 0
+        &--wrapper_content
+            @include flex_display($jc:flex-start, $ai:center, $fd:row)
+            grid-column: 1 /5 
+        &--logo
+            @include flex_display($jc:center)
+        &--search
+            @include flex_display($jc:center)
+            margin: 0 32px
+        &--search_input
+            height: 40px
+            border-top-left-radius: $main_border_radius
+            border-bottom-left-radius: $main_border_radius
+            padding: 12px
+            width: 400px
+            &::placeholder
+                color: $greyCC
+        &--search_select
+            background-color: $greyCC
+            padding: 0 16px
+            @include flex_display($ai:center)
+            height: 40px
+            &:hover
+                background-color: $orange
+                cursor: pointer
+                color: $white
+                >*
+                    color: $white
+            .nav_button_select_icon
+                font-size: 12px
+                margin: 4px 0 0 8px
+        &--search_button
+            padding: 0 16px
+            @include flex_display($ai:center)
+            border-top-right-radius: $main_border_radius
+            border-bottom-right-radius: $main_border_radius
+            &:hover
+                background-color: $orange
+                cursor: pointer
+                color: $white
+                >
+                    color: $white
+        &--link_deffered
+            margin-right: 16px
+        &--enter_button
+            height: 40px
+            padding: 0 16px
+            margin-left: auto
+            border-radius: $main_border_radius
+            &:hover
+                background-color: $orange
+                cursor: pointer
+    &-category
+        @include flex_display($jc:center)
+        background-color: $white
+        &--wrapper
+            @include new_grid(auto, repeat(4, 280px), 24px)
+        &--categories
+            display: grid
+            // grid-column: 1 / 5
+            grid-auto-flow: column
+        &--item
+            @include flex_display($ai:center, $fd:row)
+            border-right: 1px solid $greyCC
+            background-color: $white
+            &:nth-child(1)
+                border-left: 1px solid $greyCC
+            &:focus
+                z-index: 12
+            &:hover
+                background-color: $grey33
+                cursor: pointer
+                >*
+                    color: $white
+        &--name
+            padding: 12px 8px 12px 16px
+            color: $grey75
+            @extend %ellips

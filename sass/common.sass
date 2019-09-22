@@ -28,17 +28,23 @@ a
     @extend %mp0
     font-family: $GR
     text-decoration: none
+    color: $grey33
     &:hover
         cursor: pointer
+        color: $grey00
 
 button, input
     border: none
     font-family: $GF
 
-@mixin item_list($td:null, $hc:null, $lc:null, $mb:null, $pr:null, $wc:null, $ml:null)
+@mixin item_list($td:null, $hc:null, $lc:null, $mb:null, $pr:null, $wc:null, $ml:null, $ls:null, $d:null)
     @extend %mp0
     li
-        display: inline-block
+        list-style: $ls
+        @if $d == null
+            display: inline-block
+        @else
+            display: $d
         margin-bottom: $mb
         &:not(:last-child)
             padding-right: $pr
@@ -143,7 +149,8 @@ button, input
     transition: transform .6s
 
 .nav_menu_icon
-    margin: 2px 16px 0 0
+    margin-right: 16px
+    vertical-align: baseline
     font-size: 12px
     color: $grey75
 
@@ -156,16 +163,14 @@ button, input
 
 .compare_link_icon
     margin-right: 8px
-    display: inline-flex
-    justify-content: center
-    align-items: center
+    vertical-align: middle
 
 .compare_links
     color: $white
     text-decoration: none
     display: flex
     &:hover
-        color: $blue
+        color: $orange
 
 .overview
     font-size: 1em
