@@ -8,10 +8,15 @@
             grid-column: 1 / 5
     &-copyright_block
         @include flex_display($ai:center, $fd:row)
+        padding-top: 24px
+        border-top: 1px solid $grey55
     &-link_list
-        @include new_grid(auto, repeat(5, auto), 24px)
+        @include new_grid(auto, repeat(4, 220px) auto, 24px)
         @include item_list($ls:none, $lc:$white, $hc:$orange, $d:block, $ml:0, $mb:8px)
         margin-bottom: 32px
+        ul>li
+            @extend %ellips
+        //не работает, хз почему
         &--item_header
             color: $white
             margin-bottom: 16px

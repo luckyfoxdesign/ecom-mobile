@@ -1,21 +1,10 @@
 @import "var"
 @import "fonts"
-@import "components"
 @import "common"
-@import "media"
 @import "header"
 @import "articles"
 @import "footer"
-
-.content
-    width: 100vw
-    height: 100vh
-
-.wrapper
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: repeat(10, auto)
-    position: relative
+@import "page_description"
 
 .top_sales
     @include flex_display($jc:center)
@@ -238,7 +227,6 @@
             grid-column: 1 / 5
         &--content_title
             @include flex_display($ai: center)
-            margin-bottom: 32px
         &--show_more
             margin-left: auto
         &--image_wrapper
@@ -326,12 +314,3 @@
     &-item_list
         margin: $itemList_bottom_margin
         @include item_list()
-
-.how_to_use
-    @include flex_display($jc: center)
-    background-color: $bg_blue
-    &-wrapper
-        @include new_grid(repeat(3, auto), repeat(4, 280px), 24px)
-        margin: $header_bottom_margin 0
-        &--content
-            grid-column: 1 / 5

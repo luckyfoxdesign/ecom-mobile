@@ -37,6 +37,8 @@ button, input
     border: none
     font-family: $GF
 
+
+
 @mixin item_list($td:null, $hc:null, $lc:null, $mb:null, $pr:null, $wc:null, $ml:null, $ls:null, $d:null)
     @extend %mp0
     li
@@ -184,6 +186,9 @@ button, input
 
 .raiting_stars
     @include flex_display($ai:center)
+
+.block_header
+    margin-bottom: 16px
 
 %view_counter
     display: flex
