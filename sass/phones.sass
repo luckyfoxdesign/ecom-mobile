@@ -5,3 +5,19 @@
 @import "articles"
 @import "footer"
 @import "page_description"
+
+.main-content
+    @include flex_display($jc:center)
+    background-color: $bg_blue
+    &_wrapper
+        grid-template-areas: "aside content"
+        @include new_grid(auto, repeat(4, 280px), 24px)
+        margin-top: 32px
+        >.side-menu
+            grid-area: aside
+            grid-column: 1 / 2
+            padding: 16px
+            background-color: $white
+        >.area-content_wrapper
+            grid-area: content
+            grid-column: 2 / 5
