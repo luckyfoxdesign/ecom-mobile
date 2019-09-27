@@ -13,11 +13,22 @@
         grid-template-areas: "aside content"
         @include new_grid(auto, repeat(4, 280px), 24px)
         margin-top: 32px
-        >.side-menu
-            grid-area: aside
-            grid-column: 1 / 2
-            padding: 16px
-            background-color: $white
-        >.area-content_wrapper
-            grid-area: content
-            grid-column: 2 / 5
+.side-menu
+    grid-area: aside
+    grid-column: 1 / 2
+    padding: 16px
+    background-color: $white
+    &_menu-section
+        &:not(:last-child)
+            margin-bottom: 24px
+        &--header
+            margin-bottom: 12px
+        &--link
+            font-size: .9em
+            color: $grey75
+            &:not(:last-child)
+                margin-bottom: 8px
+
+.area-content_wrapper
+    grid-area: content
+    grid-column: 2 / 5

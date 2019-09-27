@@ -50,6 +50,9 @@ button, input {
   border: none;
   font-family: "GF", sans-serif; }
 
+ul {
+  list-style: none; }
+
 .hot_news-item--img img, .best_brands-items--brand_img img, .feedback-wrapper--image_wrapper img {
   position: absolute;
   left: 50%;
