@@ -39,7 +39,7 @@ p {
   font-size: 1em; }
 
 a {
-  font-family: "GRegular", sans-serif;
+  font-family: "GF", sans-serif;
   text-decoration: none;
   color: #333333; }
   a:hover {
@@ -97,7 +97,7 @@ ul {
       height: 100%;
       text-align: center; }
   .author_block .author_name {
-    font-family: "GLight", sans-serif;
+    font-family: "GF", sans-serif;
     font-size: .95em;
     font-weight: 300;
     color: #757575; }
@@ -158,12 +158,12 @@ ul {
 
 .overview {
   font-size: 1em;
-  font-family: "GRegular", sans-serif;
+  font-family: "GF", sans-serif;
   background-color: #FFA300; }
 
 .compilation {
   font-size: 1em;
-  font-family: "GRegular", sans-serif;
+  font-family: "GF", sans-serif;
   background-color: #673AB7; }
 
 .raiting_stars {
@@ -191,7 +191,7 @@ ul {
   .article-items--view_counter .counter, .interesting_videos-items--view_counter .counter {
     margin-left: 4px;
     color: #757575;
-    font-family: "GLight", sans-serif;
+    font-family: "GF", sans-serif;
     font-weight: 300;
     font-size: .9em; }
 
@@ -779,7 +779,7 @@ ul {
       background-color: #333333;
       border-radius: 16px;
       color: #ffffff;
-      font-family: "GLight", sans-serif;
+      font-family: "GF", sans-serif;
       text-decoration: none;
       font-size: .8em;
       text-align: center;
@@ -787,13 +787,13 @@ ul {
       .hot_news-item--text_counter:hover {
         color: #ffffff; }
     .hot_news-item--description {
-      font-family: "GLight", sans-serif;
+      font-family: "GF", sans-serif;
       font-size: .9em;
       color: #757575; }
     .hot_news-item--feedback {
       margin-left: auto;
       font-size: .9em;
-      font-family: "GLight", sans-serif; }
+      font-family: "GF", sans-serif; }
       .hot_news-item--feedback_link {
         text-decoration: none;
         color: #FFA300; }
@@ -812,7 +812,7 @@ ul {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      font-family: "GLight", sans-serif;
+      font-family: "GF", sans-serif;
       font-weight: 300;
       color: #757575;
       font-size: .9em; }
@@ -951,7 +951,10 @@ ul {
       -ms-flex-align: center;
       align-items: center; }
     .feedback-wrapper--show_more {
-      margin-left: auto; }
+      margin-left: auto;
+      color: #4141BE; }
+      .feedback-wrapper--show_more:hover {
+        color: #1C196F; }
     .feedback-wrapper--image_wrapper {
       position: relative;
       height: 122px;

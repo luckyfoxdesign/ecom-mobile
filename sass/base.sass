@@ -143,7 +143,7 @@
             background-color: $grey33
             border-radius: 16px
             color: $white
-            font-family: $GL
+            font-family: $GF
             text-decoration: none
             font-size: .8em
             text-align: center
@@ -151,14 +151,14 @@
             &:hover
                 color: $white
         &--description
-            font-family: $GL
+            font-family: $GF
             //font-weight: 300
             font-size: .9em
             color: $grey75
         &--feedback
             margin-left: auto
             font-size: .9em
-            font-family: $GL
+            font-family: $GF
             &_link
                 text-decoration: none
                 color: $orange
@@ -171,7 +171,7 @@
             @include flex_display($fd: row, $ai: center)
             &:not(:first-child)
                 margin-top: 8px
-            font-family: $GL
+            font-family: $GF
             font-weight: 300
             color: $grey75
             font-size: .9em
@@ -229,6 +229,9 @@
             @include flex_display($ai: center)
         &--show_more
             margin-left: auto
+            color: $blue
+            &:hover
+                color: $dark_blue
         &--image_wrapper
             position: relative
             height: 122px
