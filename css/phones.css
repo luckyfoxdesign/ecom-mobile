@@ -1,20 +1,14 @@
 @font-face {
   font-family: 'GF';
-  src: local("Graphik-Light"), local("Graphik-Light"), url("../fonts/Graphic-Light.woff") format("woff"), url("../fonts/Graphic-Light.eot") format("embedded-opentype");
-  font-weight: light;
-  font-style: normal; }
+  src: local("Graphik LC Web Light"), url("../fonts/Graphik LC Web Light.woff") format("woff2"), url("../fonts/Graphik LC Web Light.woff") format("woff"), url("../fonts/Graphik LC Web Light.eot") format("embedded-opentype"), url("../fonts/Graphik LC Web Light.woff") format("truetype"); }
 
 @font-face {
   font-family: 'GF';
-  src: local("Graphic-Medium"), local("Graphic-Medium"), url("../fonts/Graphic-Medium.woff") format("woff"), url("../fonts/Graphic-Medium.eot") format("embedded-opentype");
-  font-weight: medium;
-  font-style: normal; }
+  src: local("Graphik LC Web Medium"), url("../fonts/Graphik LC Web Medium.woff") format("woff2"), url("../fonts/Graphik LC Web Medium.woff") format("woff"), url("../fonts/Graphik LC Web Medium.eot") format("embedded-opentype"), url("../fonts/Graphik LC Web Medium.woff") format("truetype"); }
 
 @font-face {
   font-family: 'GF';
-  src: local("Graphic-Regular"), local("Graphic-Regular"), url("../fonts/Graphic-Regular.woff") format("woff"), url("../fonts/Graphic-Regular.eot") format("embedded-opentype");
-  font-weight: regular;
-  font-style: normal; }
+  src: local("Graphik LC Web Regular"), url("../fonts/Graphik LC Web Regular.woff") format("woff2"), url("../fonts/Graphik LC Web Regular.woff") format("woff"), url("../fonts/Graphik LC Web Regular.eot") format("embedded-opentype"), url("../fonts/Graphik LC Web Regular.woff") format("truetype"); }
 
 h1, h2, h3, h4, ul, button, a, .article-item_list, .footer_links-link_list, .footer_links-item_list {
   margin: 0;
