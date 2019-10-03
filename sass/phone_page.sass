@@ -32,14 +32,52 @@
             @include flex_display($fd: row, $ai:center)
         &--title_decription
         &--title
+            margin-bottom: 16px
         &--description
             font-size: .9em
+            font-family: $GFR
+            letter-spacing: $ls
+            >*
+                &:not(:last-child)
+                    margin-right: 12px
+                &:first-child
+                    padding-right: 12px
+                    border-right: 1px solid $greyE6
+                &:last-child
+                    margin-left: 12px
             @include flex_display($fd: row, $ai:center)
         &--description_text
             @include flex_display($fd: row, $ai:center)
         &--description_primary
+            font-family: $GFL
+            color: $grey75
         &--description_secondary
+            margin-left: 4px
+            color: $grey55
         &--description_link
         &--head_buttons
             margin-left: auto
             @include flex_display($fd: row, $ai:center)
+        &--button_favorite
+            @extend .phone_page_button
+            margin-right: 16px
+            .icon-heart
+                display: flex
+                font-size: 1em
+        &--button_compare
+            @extend .phone_page_button
+            .icon-plus
+                font-size: 1em
+        &--button_title
+            margin-left: 6px
+
+.phone_page_button
+    background-color: $white
+    border-radius: $main_border_radius
+    border: 2px solid $blue
+    padding: 10px 10px 8px 10px
+    color: $blue
+    &:hover
+        cursor: pointer
+        background-color: $blue
+        color: $white

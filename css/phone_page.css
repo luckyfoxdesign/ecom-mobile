@@ -132,6 +132,10 @@ ul {
   -ms-flex-align: center;
   align-items: center; }
 
+.icon-s {
+  font-size: .9em;
+  vertical-align: baseline; }
+
 .icon-xs {
   font-size: .7em;
   vertical-align: baseline; }
@@ -147,6 +151,11 @@ ul {
 .compare_link_icon {
   margin-right: 8px;
   vertical-align: middle; }
+
+.button_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .compare_links {
   color: #ffffff;
@@ -615,8 +624,12 @@ ul {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+    .phone_info-content_wrapper--title {
+      margin-bottom: 16px; }
     .phone_info-content_wrapper--description {
       font-size: .9em;
+      font-family: "GFR", sans-serif;
+      letter-spacing: 0.3px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -627,6 +640,13 @@ ul {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      .phone_info-content_wrapper--description > *:not(:last-child) {
+        margin-right: 12px; }
+      .phone_info-content_wrapper--description > *:first-child {
+        padding-right: 12px;
+        border-right: 1px solid #e6e6e6; }
+      .phone_info-content_wrapper--description > *:last-child {
+        margin-left: 12px; }
     .phone_info-content_wrapper--description_text {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -638,6 +658,12 @@ ul {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+    .phone_info-content_wrapper--description_primary {
+      font-family: "GFL", sans-serif;
+      color: #757575; }
+    .phone_info-content_wrapper--description_secondary {
+      margin-left: 4px;
+      color: #555555; }
     .phone_info-content_wrapper--head_buttons {
       margin-left: auto;
       display: -webkit-box;
@@ -650,3 +676,25 @@ ul {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+    .phone_info-content_wrapper--button_favorite {
+      margin-right: 16px; }
+      .phone_info-content_wrapper--button_favorite .icon-heart {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 1em; }
+    .phone_info-content_wrapper--button_compare .icon-plus {
+      font-size: 1em; }
+    .phone_info-content_wrapper--button_title {
+      margin-left: 6px; }
+
+.phone_page_button, .phone_info-content_wrapper--button_favorite, .phone_info-content_wrapper--button_compare {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 2px solid #4141BE;
+  padding: 10px 10px 8px 10px;
+  color: #4141BE; }
+  .phone_page_button:hover, .phone_info-content_wrapper--button_favorite:hover, .phone_info-content_wrapper--button_compare:hover {
+    cursor: pointer;
+    background-color: #4141BE;
+    color: #ffffff; }
