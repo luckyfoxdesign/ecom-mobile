@@ -1,0 +1,18 @@
+.breadcrumbs
+    @include flex_display($jc: center)
+    &-content_wrapper
+        margin: 32px 0
+        @include grid(null, repeat(5, 256px), 12px)
+        &--content
+            grid-column: 1 / 6
+            color: $grey75
+            a
+                color: $grey75
+                font-family: $GFL
+                letter-spacing: .3px
+                font-size: .9em
+                &:hover
+                    color: $grey33
+            >*
+                &:not(:last-child)
+                    margin-right: 4px

@@ -7,11 +7,11 @@
         @include flex_display($jc:center)
         background-color: $grey33
         &--wrapper
-            @include new_grid(auto, repeat(4, 280px), 24px)
+            @include grid(auto, repeat(5, 256px), 12px)
             margin: 24px 0
         &--wrapper_content
             @include flex_display($jc:flex-start, $ai:center, $fd:row)
-            grid-column: 1 /5 
+            grid-column: 1 / 6
         &--logo
             @include flex_display($jc:center)
         &--search
@@ -65,7 +65,7 @@
         @include flex_display($jc:center)
         background-color: $white
         &--wrapper
-            @include new_grid(auto, repeat(4, 280px), 24px)
+            @include grid(auto, repeat(5, 256px), 12px)
         &--categories
             display: grid
             // grid-column: 1 / 5

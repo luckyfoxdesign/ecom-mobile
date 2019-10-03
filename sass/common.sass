@@ -7,7 +7,7 @@
 
 h1,h2,h3,h4,ul, button
     @extend %mp0
-    font-family: $GF
+    font-family: $GFS
     color: $grey33
 
 h1
@@ -19,14 +19,15 @@ h3
     line-height: 1.3em
 
 p
-    font-family: $GF
+    font-family: $GFL
     color: $grey33
-    line-height: 1.5em
-    font-size: 1em
+    line-height: 1.6em
+    font-size: .95em
+    letter-spacing: .3px
 
 a
     @extend %mp0
-    font-family: $GF
+    font-family: $GFR
     text-decoration: none
     color: $grey33
     &:hover
@@ -35,7 +36,7 @@ a
 
 button, input
     border: none
-    font-family: $GF
+    font-family: $GFR
 
 ul
     list-style: none
@@ -106,11 +107,11 @@ ul
     bottom: $b
     left: $l
 
-@mixin new_grid($row, $column, $gap_column)
+@mixin grid($r:null, $c:null, $cg:null)
     display: grid
-    grid-template-rows: $row
-    grid-template-columns: $column
-    grid-column-gap: $gap_column
+    grid-template-rows: $r
+    grid-template-columns: $c
+    grid-column-gap: $cg
 
 @mixin pom($l)
     overflow: hidden
@@ -136,8 +137,8 @@ ul
             height: 100%
             text-align: center
     .author_name
-        font-family: $GF
-        font-size: .95em
+        font-family: $GFL
+        font-size: .85em
         font-weight: 300
         color: $grey75
 
@@ -160,6 +161,14 @@ ul
 .font_icon
     @include flex_display($jc: center, $ai:center)
 
+.icon-xs
+    font-size: .7em
+    vertical-align: baseline
+
+.icon-xxs
+    font-size: .6em
+    vertical-align: baseline
+
 .nav_search_icon
     font-size: 13px
     margin: 4px 6px 0 0
@@ -176,13 +185,13 @@ ul
         color: $orange
 
 .overview
-    font-size: 1em
-    font-family: $GF
+    font-size: .85em
+    font-family: $GFR
     background-color: $orange
 
 .compilation
-    font-size: 1em
-    font-family: $GF
+    font-size: .85em
+    font-family: $GFR
     background-color: $violet
 
 .raiting_stars
@@ -198,6 +207,6 @@ ul
     .counter
         margin-left: 4px
         color: $grey75
-        font-family: $GF
+        font-family: $GFL
         font-weight: 300
-        font-size: .9em
+        font-size: .8em

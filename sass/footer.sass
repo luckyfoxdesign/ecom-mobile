@@ -2,7 +2,7 @@
     @include flex_display($jc:center)
     background-color: $grey33
     &-wrapper
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(4, 280px), 24px)
         margin: $header_bottom_margin 0
         &--wrapper_content
             grid-column: 1 / 5
@@ -11,11 +11,12 @@
         padding-top: 24px
         border-top: 1px solid $grey55
     &-link_list
-        @include new_grid(auto, repeat(4, 220px) auto, 24px)
+        @include grid(auto, repeat(4, 220px) auto, 24px)
         @include item_list($ls:none, $lc:$white, $hc:$orange, $d:block, $ml:0, $mb:8px)
         margin-bottom: 32px
         ul>li
             @extend %ellips
+            font-family: $GFL
         //не работает, хз почему
         &--item_header
             color: $white
@@ -25,7 +26,7 @@
             >:not(:last-child)
                 margin-bottom: 12px
     &-copyright
-        font-family: $GF
+        font-family: $GFL
         color: $grey75
         font-size: .9em
 

@@ -5,13 +5,14 @@
 @import "articles"
 @import "footer"
 @import "page_description"
+@import "product_item"
 
 .main-content
     @include flex_display($jc:center)
     background-color: $bg_blue
     &_wrapper
         grid-template-areas: "aside content"
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(5, 256px), 12px)
         margin-top: 32px
 .side-menu
     grid-area: aside
@@ -33,15 +34,15 @@
 
 .area_content
     grid-area: content
-    grid-column: 2 / 5
+    grid-column: 2 / 6
     &--category
         margin: 64px 0
     &_category-header
         position: relative
-        @include new_grid(auto, repeat(3, 280px), 24px)
+        @include grid(auto, repeat(4, 256px))
         margin-bottom: 64px
         &--wrapper
-            grid-column: 1 / 4
+            grid-column: 1 / 6
             height: 140px
             overflow: hidden
         &--header
@@ -64,7 +65,7 @@
             &:hover
                 color: $dark_blue
     &--category_items
-        @include new_grid(auto, repeat(3, 280px), 24px)
+        @include grid(auto, repeat(4, 256px), 12px)
     &-item
         padding: 24px
         background-color: $white
@@ -97,7 +98,7 @@
             background-color: $grey33
             border-radius: 16px
             color: $white
-            font-family: $GF
+            font-family: $GFR
             text-decoration: none
             font-size: .8em
             text-align: center
@@ -105,14 +106,14 @@
             &:hover
                 color: $white
         &--description
-            font-family: $GF
+            font-family: $GFR
             //font-weight: 300
             font-size: .9em
             color: $grey75
         &--feedback
             margin-left: auto
             font-size: .9em
-            font-family: $GF
+            font-family: $GFR
             &_link
                 text-decoration: none
                 color: $orange
@@ -125,7 +126,7 @@
             @include flex_display($fd: row, $ai: center)
             &:not(:first-child)
                 margin-top: 8px
-            font-family: $GF
+            font-family: $GFR
             font-weight: 300
             color: $grey75
             font-size: .9em
@@ -144,7 +145,7 @@
                 @extend %image_center
                 border-radius: $main_border_radius
             &_wrapper
-                @include new_grid(auto, repeat(5, 1fr), 16px)
+                @include grid(auto, repeat(5, auto), 12px)
                 grid-row-gap: 16px
                 grid-column-start: 1
                 grid-column-end: 5

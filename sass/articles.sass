@@ -6,7 +6,7 @@
         margin: $itemList_bottom_margin
         @include item_list()
     &-items
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(4, 280px), 24px)
         &--article_author
             @include flex_display($fd: row, $ai: center)
         &--article_image
@@ -24,9 +24,11 @@
             border-radius: 0 3px 0 3px
             color: $white
         &--article_header
+            font-family: $GFS
             @include pom(2)
         &--article_description
             margin: $paragraph_margin
+            // font-family: $GFL
             height: 48px
             color: $grey75
             @include pom(2)

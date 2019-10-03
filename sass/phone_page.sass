@@ -1,0 +1,45 @@
+@import "var"
+@import "fonts"
+@import "common"
+@import "header"
+@import "articles"
+@import "footer"
+@import "breadcrumbs"
+
+.main_block
+    background-color: $bg_blue
+
+.breadcrumbs
+    &-content_wrapper
+        &--content
+            @include flex_display($fd: row, $ai:center)
+        &--external_link
+            margin-left: auto
+            .icon-foreign
+                margin-right: 4px
+
+.phone_info
+    @include flex_display($jc: center)
+    &-content_wrapper
+        @include grid(null, repeat(5, 256px), 12px)
+        margin-bottom: $header_bottom_margin
+        &--content
+            grid-column: 1 / 6
+            background-color: $white
+        &--content_head
+            padding: 20px 24px
+            border-bottom: 1px solid $greyE6
+            @include flex_display($fd: row, $ai:center)
+        &--title_decription
+        &--title
+        &--description
+            font-size: .9em
+            @include flex_display($fd: row, $ai:center)
+        &--description_text
+            @include flex_display($fd: row, $ai:center)
+        &--description_primary
+        &--description_secondary
+        &--description_link
+        &--head_buttons
+            margin-left: auto
+            @include flex_display($fd: row, $ai:center)

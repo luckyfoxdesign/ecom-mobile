@@ -1,0 +1,34 @@
+@import "var"
+@import "fonts"
+@import "common"
+@import "header"
+@import "articles"
+@import "footer"
+@import "breadcrumbs"
+
+.main_block
+    background-color: $bg_blue
+
+.product_information
+    @include flex_display($jc: center)
+    &-content_wrapper
+        @include grid(null, repeat(5, 256px), 12px)
+        &--content
+            grid-column: 1 / 6
+            @include flex_display($fd: row)
+            background-color: $white
+            padding: 24px 16px
+        &--raiting_wrapper
+            margin-left: 16px
+        &--raiting_header
+            margin-bottom: 12px
+        &--raiting_title
+            font-family: $GFL
+            margin-right: 8px
+        &--phone_image
+            position: relative
+            height: 80px
+            width: 80px
+            @extend %image_center
+        &--phone_raiting
+            @include flex_display($fd: row, $ai: center)

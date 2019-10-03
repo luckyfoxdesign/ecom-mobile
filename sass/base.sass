@@ -5,13 +5,14 @@
 @import "articles"
 @import "footer"
 @import "page_description"
+@import "product_item"
 
 .top_sales
     @include flex_display($jc:center)
     background-color: $bg_blue
     &-wrapper
         margin-top: 32px
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(4, 280px), 24px)
     &-new_phone
         grid-column: 1 / 4
         background-color: $blue
@@ -61,7 +62,7 @@
             background-color: $dark_blue
             border-radius: $main_border_radius
             color: $white
-            font-family: $GF
+            font-family: $GFR
             // font-size: .9em
 
     &-items
@@ -106,78 +107,10 @@
     background-color: $bg_blue
     @include flex_display($jc: center)
     &-wrapper
-        margin: 32px 24px 40px 24px
+        margin-top: 32px
+        margin-bottom: $header_bottom_margin
     &-items
-        @include new_grid(1fr, repeat(4, 280px), 24px)
-        overflow-x: scroll
-        scroll-snap-type: x proximity
-    &-item
-        padding: 24px
-        background-color: $white
-        border-radius: $main_border_radius
-        position: relative
-        &--header_block
-            margin-bottom: 16px
-        &--item_header
-            margin-bottom: 4px
-            @extend %ellips
-        &--img
-            position: relative
-            width: 100%
-            height: 200px
-            margin-bottom: 24px
-            @extend %image_center
-        &--like_icon
-            @include pos_abs($t: 0, $r: 0)
-            z-index: 10
-            width: 60px
-            height: 60px
-            @include flex_display($jc: center, $ai: center)
-        &--raiting
-            @include flex_display($fd: row, $ai: center)
-        &--raiting_counter
-            @include flex_display($fd: row, $ai: center)
-        &--text_counter
-            padding: 6px 0
-            width: 40px
-            background-color: $grey33
-            border-radius: 16px
-            color: $white
-            font-family: $GF
-            text-decoration: none
-            font-size: .8em
-            text-align: center
-            margin-right: 8px
-            &:hover
-                color: $white
-        &--description
-            font-family: $GF
-            //font-weight: 300
-            font-size: .9em
-            color: $grey75
-        &--feedback
-            margin-left: auto
-            font-size: .9em
-            font-family: $GF
-            &_link
-                text-decoration: none
-                color: $orange
-                &:hover
-                    color: $darkOrange
-                    //text-decoration: underline
-        &--features
-            margin-top: 16px
-        &--feature
-            @include flex_display($fd: row, $ai: center)
-            &:not(:first-child)
-                margin-top: 8px
-            font-family: $GF
-            font-weight: 300
-            color: $grey75
-            font-size: .9em
-        &--feature_icon
-            @include flex_display($ai: center)
-            margin-right: 8px
+        @include grid(1fr, repeat(4, 280px), 24px)
     &-item_list
         margin: $itemList_bottom_margin
         @include item_list()
@@ -187,7 +120,7 @@
     background-color: $bg_blue
     &-wrapper
         margin-top: 64px
-        @include new_grid(repeat(2, auto), repeat(4, 280px), 24px)
+        @include grid(repeat(2, auto), repeat(4, 280px), 24px)
     &-header
         grid-column: 1 /5
         margin-bottom: 24px
@@ -203,7 +136,7 @@
     &-header
         margin-bottom: 24px
     &-items
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(4, 280px), 24px)
         &--brand_img
             position: relative
             width: 100%
@@ -212,7 +145,7 @@
             @extend %image_center
             border-radius: $main_border_radius
         &_wrapper
-            @include new_grid(repeat(2, 1fr), repeat(5, 1fr), 16px)
+            @include grid(repeat(2, 1fr), repeat(5, 1fr), 16px)
             grid-row-gap: 16px
             grid-column-start: 1
             grid-column-end: 5
@@ -222,7 +155,7 @@
     background-color: $bg_blue
     &-wrapper
         margin-top: $header_bottom_margin
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(4, 280px), 24px)
         &--wrapper_content
             grid-column: 1 / 5
         &--content_title
@@ -241,7 +174,7 @@
             &:hover
                 color: $grey00
     &-items
-        @include new_grid(auto, repeat(6, 182px), 20px)
+        @include grid(auto, repeat(6, 182px), 20px)
         &--item_header
             @extend %ellips
         &--feedback_item
@@ -269,7 +202,7 @@
     &-wrapper
         margin: $header_bottom_margin 0
     &-items
-        @include new_grid(auto, repeat(4, 280px), 24px)
+        @include grid(auto, repeat(4, 280px), 24px)
         &--video
             position: relative
             width: 280px
@@ -291,10 +224,10 @@
         &--video_title
             @include pos_abs($t:0, $l:0)
             padding: 10px 0 0 12px
-            color: $white
-            font-family: $GF
-            font-size: .9em
             z-index: 3
+        &--title
+            font-size: .9em 
+            color: $white
         &--video_frame
             @include pos_abs($t:0, $l:0)
         &--view_counter
