@@ -11,12 +11,16 @@
 
 .breadcrumbs
     &-content_wrapper
-        &--content
-            @include flex_display($fd: row, $ai:center)
         &--external_link
             margin-left: auto
+            @include flex_display($fd: row, $ai:center)
             .icon-foreign
                 margin-right: 4px
+        &--breadcrumb_links
+            @include flex_display($fd: row, $ai:center)
+            >*
+                &:not(:last-child)
+                    margin-right: 4px
 
 .phone_info
     @include flex_display($jc: center)
@@ -47,7 +51,7 @@
                     margin-left: 12px
             @include flex_display($fd: row, $ai:center)
         &--description_text
-            @include flex_display($fd: row, $ai:center)
+            @include flex_display($fd: row, $ai:baseline)
         &--description_primary
             font-family: $GFL
             color: $grey75
@@ -103,9 +107,56 @@
             position: relative
         &--additional_image
             @extend %ic
+        //
         &--info_block
             grid-area: info
-            grid-column: 2 / 6
+            grid-column: 2 / 5
+            padding: 24px
+        &--phone_stats
+            @include flex_display($jc: flex-start, $ai:center, $fd:row)
+            padding-bottom: 28px
+            border-bottom: 1px solid $greyE6
+        &--user_feedback
+            padding-right: 32px
+            border-right: 1px solid $greyE6
+        &--expert_feedback
+            padding-left: 32px
+        &--char_buttons
+            @include flex_display($ai: center, $fd:row)
+            margin-left: auto
+        &--phone_color_block
+            margin-right: 16px
+        //
+        &--characteristics
+            padding-top: 24px
+        //&--characteristics_header
+        &--characteristics_all
+            font-size: .9em
+            margin-left: auto
+            color: $blue
+            &:hover
+                color: $dark_blue
+        &--characteristics_header_block
+            margin-bottom: 12px
+            @include flex_display($ai: center)
+        &--characteristics_os
+            @include flex_display($ai: center)
+            margin-bottom: 24px
+        &--characteristics_os_logo
+            margin-right: 8px
+            @include flex_display($ai: center)
+        &--characteristics_os_name
+            font-family: $GFL
+            color: $grey75
+        &--characteristics_detals_block
+            padding: 24px
+            background-color: $greyE6
+        &--characteristics_detals
+            @include flex_display($fd: row)
+            >*
+                &:not(:last-child)
+                    margin-right: 56px
+            //@include grid(auto, repeat(3, auto), 24px)
 
 .phone_page_button
     background-color: $white
@@ -117,3 +168,58 @@
         cursor: pointer
         background-color: $blue
         color: $white
+
+.phone_stats
+    @include flex_display($ai: baseline)
+    margin-bottom: 4px
+    &-primary
+        margin-right: 8px
+        font-size: 1.8em
+    &-secondary
+        font-family: $GFL
+        color: $grey75
+    &-link
+        font-family: $GFL
+        font-size: 0.8em
+        text-decoration: underline
+        color: $grey75
+
+.phone_select-block
+    &--label
+        font-family: $GFL
+        font-size: .85em
+        margin-bottom: 6px
+        color: $grey75
+    &--select_button
+        padding: 10px 8px 8px 8px
+        border-radius: $main_border_radius
+        border: 1px solid $greyE6
+        font-size: .85em
+        width: 160px
+        text-align: left
+        @include flex_display($ai: center)
+        .icon-down-chevron
+            margin-left: auto
+        &:hover
+            cursor: pointer
+            color: $blue
+            border: 1px solid $blue
+
+.characteristic
+    @include flex_display($jc: flex-start, $fd:column)
+    &-header
+        margin-bottom: 12px
+    &-list
+        font-family: $GFL
+        font-size: .9em
+        max-width: 283px
+        >*
+            &:not(:last-child)
+                margin-bottom: 8px
+    &-list_item
+        @include flex_display($ai: center)
+        &--icon
+            margin-right: 8px
+        &--name
+            max-width: 283px
+            @extend %ellips

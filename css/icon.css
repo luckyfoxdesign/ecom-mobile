@@ -18,6 +18,10 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
+[class*='icon-']{
+    display: flex;
+    align-items: center
+}
 .icon-add_list:before{content:'\0041';}
 .icon-magnifying-glass:before{content:'\0042';}
 .icon-down-chevron:before{content:'\0043';}

@@ -571,7 +571,13 @@ ul {
       -ms-grid-column: 1;
       -ms-grid-column-span: 5;
       grid-column: 1 / 6;
-      color: #757575; }
+      color: #757575;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
       .breadcrumbs-content_wrapper--content a {
         color: #757575;
         font-family: "GFL", sans-serif;
