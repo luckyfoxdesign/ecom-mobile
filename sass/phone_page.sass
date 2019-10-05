@@ -70,6 +70,42 @@
                 font-size: 1em
         &--button_title
             margin-left: 6px
+        //
+        &--content_body
+            grid-template-areas: "image info"
+            @include grid(null, repeat(4, 323px), 12px)
+        &--image_block
+            grid-area: image
+            grid-column: 1 / 2
+            border-right: 1px solid $greyE6
+        &--main_image_block
+            padding: 24px
+        &--main_image_container
+            position: relative
+            height: 400px
+            width: 274px
+        &--main_phone_image
+            @extend %ic
+        &--additional_images
+            padding: 24px
+            @include flex_display($fd: row)
+            >*
+                &:not(:last-child)
+                    margin-right: 8px
+        &--additional_image_block
+            position: relative
+            border: 1px solid $greyE6
+            padding: 12px
+        &--additional_image_container
+            overflow: hidden
+            width: 60px
+            height: 80px
+            position: relative
+        &--additional_image
+            @extend %ic
+        &--info_block
+            grid-area: info
+            grid-column: 2 / 6
 
 .phone_page_button
     background-color: $white

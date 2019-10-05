@@ -56,6 +56,16 @@ button, input {
 ul {
   list-style: none; }
 
+.phone_info-content_wrapper--main_phone_image, .phone_info-content_wrapper--additional_image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%; }
+
 .nav_links-category--name, .footer_links-link_list ul > li {
   white-space: nowrap;
   overflow: hidden;
@@ -687,6 +697,54 @@ ul {
       font-size: 1em; }
     .phone_info-content_wrapper--button_title {
       margin-left: 6px; }
+    .phone_info-content_wrapper--content_body {
+      grid-template-areas: "image info";
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 323px 12px 323px 12px 323px 12px 323px;
+      grid-template-columns: repeat(4, 323px);
+      grid-column-gap: 12px; }
+    .phone_info-content_wrapper--image_block {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      grid-area: image;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+      grid-column: 1 / 2;
+      border-right: 1px solid #e6e6e6; }
+    .phone_info-content_wrapper--main_image_block {
+      padding: 24px; }
+    .phone_info-content_wrapper--main_image_container {
+      position: relative;
+      height: 400px;
+      width: 274px; }
+    .phone_info-content_wrapper--additional_images {
+      padding: 24px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .phone_info-content_wrapper--additional_images > *:not(:last-child) {
+        margin-right: 8px; }
+    .phone_info-content_wrapper--additional_image_block {
+      position: relative;
+      border: 1px solid #e6e6e6;
+      padding: 12px; }
+    .phone_info-content_wrapper--additional_image_container {
+      overflow: hidden;
+      width: 60px;
+      height: 80px;
+      position: relative; }
+    .phone_info-content_wrapper--info_block {
+      -ms-grid-row: 1;
+      -ms-grid-column: 3;
+      grid-area: info;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 4;
+      grid-column: 2 / 6; }
 
 .phone_page_button, .phone_info-content_wrapper--button_favorite, .phone_info-content_wrapper--button_compare {
   background-color: #ffffff;
