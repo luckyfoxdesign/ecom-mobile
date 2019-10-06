@@ -97,9 +97,12 @@ ul
     overflow: hidden
     text-overflow: ellipsis
 
-%flex_center
-    display: flex
-    justify-content: center
+@mixin imc($w:null, $h:null)
+    overflow: hidden
+    width: $w
+    height: $h
+    position: relative
+    @extend %image_center
 
 @mixin flex_display($fd: null, $jc: null, $ai: null)
     display: flex

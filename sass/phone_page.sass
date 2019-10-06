@@ -23,13 +23,8 @@
                     margin-right: 4px
 
 .phone_info
-    @include flex_display($jc: center)
     &-content_wrapper
-        @include grid(null, repeat(5, 256px), 12px)
-        margin-bottom: $header_bottom_margin
-        &--content
-            grid-column: 1 / 6
-            background-color: $white
+        //&--content
         &--content_head
             padding: 20px 24px
             border-bottom: 1px solid $greyE6
@@ -86,7 +81,7 @@
             padding: 24px
         &--main_image_container
             position: relative
-            height: 400px
+            height: 395px
             width: 274px
         &--main_phone_image
             @extend %ic
@@ -152,11 +147,53 @@
             padding: 24px
             background-color: $greyE6
         &--characteristics_detals
-            @include flex_display($fd: row)
-            >*
-                &:not(:last-child)
-                    margin-right: 56px
-            //@include grid(auto, repeat(3, auto), 24px)
+            // @include flex_display($fd: row)
+            // >*
+            //     &:not(:last-child)
+            //         margin-right: 56px
+            @include grid(auto, repeat(3, auto) 1fr, 24px)
+        //
+        &--other_photos
+            margin-top: 32px
+        &--other_header
+            margin-bottom: 16px
+        &--other_photo_list
+            @include grid(auto, repeat(8, auto), 24px)
+        &--other_photo_container
+            //@include flex_display($ai: center)
+        &--other_photo_counter
+            margin-left: 4px
+        &--other_photo_name
+            text-align: center
+
+.phone_article
+    &-content_wrapper
+        &--content
+            padding: 24px
+        &--article_header
+            margin-bottom: 16px
+        &--article_more
+            text-decoration: underline
+
+.phone_competitors
+    &-content_wrapper
+        &--content
+            padding: 24px
+        &--header
+            padding-bottom: 24px
+        &--phone_name
+            margin-left: 6px
+        &--competitors
+            @include grid(auto, repeat(3, auto), 24px)
+
+.main_section
+    @include flex_display($jc: center)
+    &-wrapper
+        @include grid(null, repeat(5, 256px), 12px)
+        margin-bottom: $header_bottom_margin/2
+    &-content
+        grid-column: 1 / 6
+        background-color: $white
 
 .phone_page_button
     background-color: $white
@@ -194,6 +231,7 @@
         padding: 10px 8px 8px 8px
         border-radius: $main_border_radius
         border: 1px solid $greyE6
+        background-color: $white
         font-size: .85em
         width: 160px
         text-align: left
@@ -208,18 +246,61 @@
 .characteristic
     @include flex_display($jc: flex-start, $fd:column)
     &-header
-        margin-bottom: 12px
+        margin-bottom: 16px
+        max-width: 283px
+        @extend %ellips
     &-list
         font-family: $GFL
         font-size: .9em
         max-width: 283px
         >*
             &:not(:last-child)
-                margin-bottom: 8px
+                margin-bottom: 12px
     &-list_item
         @include flex_display($ai: center)
         &--icon
             margin-right: 8px
+            @include flex_display($jc: center)
         &--name
             max-width: 283px
             @extend %ellips
+
+.other_photo
+    &-block
+        //@include flex_display($ai: center, $fd:column)
+        font-family: $GFR
+        font-size: .9em
+        color: $grey75
+    &-photo
+        padding: 12px
+        border: 1px solid $greyE6
+        margin-bottom: 8px
+        //width: 100%
+        @include flex_display($jc: center)
+    &-container
+        @include imc(60px, 80px)
+
+.competitor_block
+    @include flex_display($fd: row)
+    padding: 16px
+    border: 1px solid $greyE6
+    &-image_block
+        @include imc(60px, 80px)
+    &-info_block
+        @include flex_display($fd: column)
+        margin-left: 16px
+    &-competitor_name
+        font-family: $GFR
+        color: $grey75
+        margin-bottom: 6px
+    &-competitor_price
+        font-family: $GFS
+        color: $grey33
+        font-size: 1.2em
+    &-competitor_challenge
+        @include flex_display($ai: center)
+        font-size: .9em
+        margin-top: auto
+        //color: $grey33
+        .icon-plus
+            margin-right: 4px
