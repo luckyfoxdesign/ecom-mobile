@@ -564,13 +564,13 @@ ul {
     margin: 32px 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (256px)[5];
-    grid-template-columns: repeat(5, 256px);
-    grid-column-gap: 12px; }
+    -ms-grid-columns: (280px)[4];
+    grid-template-columns: repeat(4, 280px);
+    grid-column-gap: 24px; }
     .breadcrumbs-content_wrapper--content {
       -ms-grid-column: 1;
-      -ms-grid-column-span: 5;
-      grid-column: 1 / 6;
+      -ms-grid-column-span: 4;
+      grid-column: 1 / 5;
       color: #757575;
       display: -webkit-box;
       display: -ms-flexbox;

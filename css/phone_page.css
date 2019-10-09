@@ -574,13 +574,13 @@ ul {
     margin: 32px 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (256px)[5];
-    grid-template-columns: repeat(5, 256px);
-    grid-column-gap: 12px; }
+    -ms-grid-columns: (280px)[4];
+    grid-template-columns: repeat(4, 280px);
+    grid-column-gap: 24px; }
     .breadcrumbs-content_wrapper--content {
       -ms-grid-column: 1;
-      -ms-grid-column-span: 5;
-      grid-column: 1 / 6;
+      -ms-grid-column-span: 4;
+      grid-column: 1 / 5;
       color: #757575;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -720,8 +720,10 @@ ul {
   grid-template-areas: "image info";
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 323px 12px 323px 12px 323px 12px 323px;
-  grid-template-columns: repeat(4, 323px);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -ms-grid-columns: auto 12px auto 12px auto 12px auto;
+  grid-template-columns: repeat(4, auto);
   grid-column-gap: 12px; }
 
 .phone_info-content_wrapper--image_block {
@@ -738,8 +740,7 @@ ul {
 
 .phone_info-content_wrapper--main_image_container {
   position: relative;
-  height: 395px;
-  width: 274px; }
+  height: 395px; }
 
 .phone_info-content_wrapper--additional_images {
   padding: 24px;
@@ -751,7 +752,7 @@ ul {
   -ms-flex-direction: row;
   flex-direction: row; }
   .phone_info-content_wrapper--additional_images > *:not(:last-child) {
-    margin-right: 8px; }
+    margin-right: auto; }
 
 .phone_info-content_wrapper--additional_image_block {
   position: relative;
@@ -878,8 +879,8 @@ ul {
   display: grid;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
-  -ms-grid-columns: (auto)[8];
-  grid-template-columns: repeat(8, auto);
+  -ms-grid-columns: (auto)[6];
+  grid-template-columns: repeat(6, auto);
   grid-column-gap: 24px; }
 
 .phone_info-content_wrapper--other_photo_counter {
@@ -915,6 +916,37 @@ ul {
   grid-template-columns: repeat(3, auto);
   grid-column-gap: 24px; }
 
+.phone_review-content_wrapper--content {
+  padding: 24px; }
+
+.phone_review-content_wrapper--review_raiting_block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -ms-grid-columns: (auto)[4];
+  grid-template-columns: repeat(4, auto);
+  grid-column-gap: 24px; }
+
+.phone_review-content_wrapper--review_counter {
+  margin-bottom: 0 !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important; }
+
+.phone_review-content_wrapper--review_counter {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3; }
+
+.phone_review-content_wrapper--review_feedback_block {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5; }
+
 .main_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -925,15 +957,24 @@ ul {
   .main_section-wrapper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (256px)[5];
-    grid-template-columns: repeat(5, 256px);
-    grid-column-gap: 12px;
+    -ms-grid-columns: (280px)[4];
+    grid-template-columns: repeat(4, 280px);
+    grid-column-gap: 24px;
     margin-bottom: 32px; }
   .main_section-content {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-    grid-column: 1 / 6;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
     background-color: #ffffff; }
+
+.feedback_item {
+  list-style-position: outside; }
+  .feedback_item:before {
+    content: "\2022";
+    display: inline-block;
+    color: #FFA300;
+    width: 1em;
+    margin-left: -1em; }
 
 .phone_page_button, .phone_info-content_wrapper--button_favorite, .phone_info-content_wrapper--button_compare {
   background-color: #ffffff;
